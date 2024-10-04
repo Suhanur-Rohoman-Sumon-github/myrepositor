@@ -1,3 +1,5 @@
 .heroSection {
   background: url(../../../assets/img/heroSection.png);
+  background-position: center;
+  background-size: cover;
 }

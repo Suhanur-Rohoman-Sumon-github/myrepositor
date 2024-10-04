@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <div className="h-[892px] w-full heroSection">
       <Container>
-        <div className="relative top-[280px] flex justify-center items-center ">
+        <div className="relative  top-[280px] flex justify-center items-center ">
           <div className=" lg:w-[60%] text-center space-y-5">
             <h2 className="text-5xl font-bold">
               Boost Your Business with Expert SEO & Web Solutions

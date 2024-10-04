@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .btn-primary {
-  @apply px-8 py-2 bg-brandPrimary flex justify-center items-center font-bold text-white text-[14px] rounded-full;
+  @apply px-8 py-3 bg-brandPrimary flex justify-center items-center font-bold text-white text-[14px] rounded-full hover:bg-[#7d49ee] transition-all duration-200;
 }

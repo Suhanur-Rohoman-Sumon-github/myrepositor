@@ -6,6 +6,17 @@
   @apply px-8 py-3 bg-brandPrimary flex justify-center items-center font-bold text-white text-[14px] rounded-full hover:bg-[#7d49ee] transition-all duration-200;
 }
 
+.btn-primary-sm {
+  @apply px-5 py-2 bg-brandPrimary flex justify-center items-center font-bold text-white text-xs rounded-full hover:bg-[#7d49ee] transition-all duration-200;
+}
+
+.btn-sm {
+  @apply px-5 py-2 bg-[#9867FF1A] flex justify-center items-center font-bold text-brandPrimary hover:text-white text-xs rounded-full hover:bg-[#7d49ee] transition-all duration-200;
+}
+
+.btn-outline {
+  @apply text-brandPrimary flex items-center gap-1 mt-2 border-b border-brandPrimary pb-1;
+}
 body {
   max-width: 2400px;
   margin: auto;

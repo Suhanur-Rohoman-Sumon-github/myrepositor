@@ -11,7 +11,7 @@ const WhoWeAreSection = () => {
           subheading="who we are"
           style="text-center w-1/2 mx-auto"
         />
-        <div className="lg:flex justify-between items-center gap-10 mb-[165px]">
+        <div className="lg:flex mt-12 justify-between items-center gap-10 mb-[165px]">
           <div className="relative flex justify-center items-center">
             <img
               className=" lg:w-[400px] h-[290px] rounded-lg"

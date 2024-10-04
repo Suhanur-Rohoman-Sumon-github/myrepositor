@@ -1,5 +1,6 @@
 import AdvertosimgSection from '../AdvertisingSection/AdvertosimgSection';
 import HeroSection from '../HeroSection/HeroSection';
+import Milestones from '../Milestones/Milestones';
 import WhoWeAreSection from '../WhoWeAreSection/WhoWeAreSection';
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <HeroSection />
       <AdvertosimgSection />
       <WhoWeAreSection />
+      <Milestones />
     </>
   );
 };

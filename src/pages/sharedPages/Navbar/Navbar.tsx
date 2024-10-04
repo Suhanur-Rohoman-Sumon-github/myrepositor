@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
         isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
       }`}
     >
@@ -33,11 +33,13 @@ const Navbar = () => {
         <div className="flex  h-[116px] justify-between items-center ">
           <div className="w-fit text-2xl font-bold">TechTuned Services</div>
           <div
-            className={`lg:static absolute transition-all duration-200 bg-white w-full lg:w-fit ${
-              isOpen ? 'left-0 top-24' : '-left-[100%] top-24'
+            className={`lg:static absolute transition-all duration-200 lg:bg-transparent bg-white w-full lg:w-fit ${
+              isOpen ? 'left-0 top-24 p-5' : '-left-[100%] top-24 p-5'
             }`}
           >
-            <ul className={`  lg:flex text-center  justify-center gap-5`}>
+            <ul
+              className={`  lg:flex text-center  justify-center space-y-8 lg:space-y-0 lg:gap-5`}
+            >
               <li className="hover:text-brandPrimary transition-all duration-200">
                 <Link to="/"> Home</Link>
               </li>

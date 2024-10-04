@@ -4,13 +4,13 @@ import Footer from '../pages/sharedPages/Footer/Footer';
 
 const MainLayouts = () => {
   return (
-    <div className="container">
+    <>
       <Navbar />
       <div className="min-h-[calc(100vh-100px)]">
         <Outlet />
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

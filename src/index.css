@@ -5,3 +5,8 @@
 .btn-primary {
   @apply px-8 py-3 bg-brandPrimary flex justify-center items-center font-bold text-white text-[14px] rounded-full hover:bg-[#7d49ee] transition-all duration-200;
 }
+
+body {
+  max-width: 2400px;
+  margin: auto;
+}

@@ -4,6 +4,7 @@ import HeroSection from '../HeroSection/HeroSection';
 import HowWeWorks from '../HowWeWorks/HowWeWorks';
 import Milestones from '../Milestones/Milestones';
 import OurService from '../OurService/OurService';
+import SubscribedSection from '../SubscribedSection/SubscribedSection';
 import WhoWeAreSection from '../WhoWeAreSection/WhoWeAreSection';
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <OurService />
       <HowWeWorks />
       <HappyCoustomer />
+      <SubscribedSection />
     </>
   );
 };

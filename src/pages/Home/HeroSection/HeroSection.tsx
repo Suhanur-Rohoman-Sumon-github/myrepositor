@@ -4,10 +4,9 @@ const HeroSection = () => {
   return (
     <div className="h-[892px] w-full heroSection">
       <Container>
-        <div className="relative top-[280px] flex justify-between items-center ">
-          <div>image</div>
-          <div className="w-1/2 text-center space-y-5">
-            <h2 className="text-6xl ">
+        <div className="relative top-[280px] flex justify-center items-center ">
+          <div className=" lg:w-[60%] text-center space-y-5">
+            <h2 className="text-5xl font-bold">
               Boost Your Business with Expert SEO & Web Solutions
             </h2>
             <p>
@@ -16,11 +15,10 @@ const HeroSection = () => {
               online presence and drive measurable results. Let us help you turn
               your website into a powerful tool for business growth.
             </p>
-            <div className="text-center">
+            <div className="flex justify-center">
               <button className="btn-primary">Learn More</button>
             </div>
           </div>
-          <div>image</div>
         </div>
       </Container>
     </div>

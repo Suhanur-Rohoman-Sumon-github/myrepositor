@@ -1,5 +1,6 @@
 import AdvertosimgSection from '../AdvertisingSection/AdvertosimgSection';
 import Articalse from '../Articales/Articalse';
+import CallBackSection from '../CallBackSection/CallBackSection';
 import HappyCoustomer from '../HappyCoustomer/HappyCoustomer';
 import HeroSection from '../HeroSection/HeroSection';
 import HowWeWorks from '../HowWeWorks/HowWeWorks';
@@ -20,6 +21,7 @@ const Home = () => {
       <HappyCoustomer />
       <SubscribedSection />
       <Articalse />
+      <CallBackSection />
     </>
   );
 };

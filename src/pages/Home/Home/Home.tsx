@@ -4,6 +4,7 @@ import CallBackSection from '../CallBackSection/CallBackSection';
 import HappyCoustomer from '../HappyCoustomer/HappyCoustomer';
 import HeroSection from '../HeroSection/HeroSection';
 import HowWeWorks from '../HowWeWorks/HowWeWorks';
+import LeadershipSection from '../LeadershipSection/LeadershipSection';
 import Milestones from '../Milestones/Milestones';
 import OurService from '../OurService/OurService';
 import SubscribedSection from '../SubscribedSection/SubscribedSection';
@@ -22,6 +23,7 @@ const Home = () => {
       <SubscribedSection />
       <Articalse />
       <CallBackSection />
+      <LeadershipSection />
     </>
   );
 };

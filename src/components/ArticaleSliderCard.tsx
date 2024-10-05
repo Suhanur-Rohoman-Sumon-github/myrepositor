@@ -18,7 +18,7 @@ const ArticaleSliderCard = () => {
         <h2 className="card-title">Emerging Job Market Trends for 2024</h2>
         <p>Sed ut perspiciatis unde omnis iste natus error sit...</p>
         <div className="card-actions justify-start">
-          <button className="btn-outline">
+          <button className="btn-service">
             Read More <HiArrowUpRight />
           </button>
         </div>

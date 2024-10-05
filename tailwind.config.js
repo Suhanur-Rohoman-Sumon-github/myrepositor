@@ -10,6 +10,9 @@ export default {
         brandHighlight: '#FF6A00', // Orange
         brandText: '#333333', // Dark Gray (for text)
       },
+      fontFamily: {
+        headingFont: 'Sora',
+      },
     },
   },
   plugins: [require('daisyui')],

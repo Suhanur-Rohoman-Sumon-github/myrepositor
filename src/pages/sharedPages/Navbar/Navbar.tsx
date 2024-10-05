@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Container from '../../../components/Container';
 import { useEffect, useState } from 'react';
 import { FaBars, FaXmark } from 'react-icons/fa6';
@@ -38,25 +38,25 @@ const Navbar = () => {
             }`}
           >
             <ul
-              className={`  lg:flex text-center  justify-center space-y-8 lg:space-y-0 lg:gap-5`}
+              className={`  lg:flex text-center  justify-center space-y-8 lg:space-y-0 lg:gap-5 active-links`}
             >
               <li className="hover:text-brandPrimary transition-all duration-200">
-                <Link to="/"> Home</Link>
+                <NavLink to="/"> Home</NavLink>
               </li>
               <li className="hover:text-brandPrimary transition-all duration-200">
-                <Link to="/about">About</Link>
+                <NavLink to="/about">About</NavLink>
               </li>
               <li className="hover:text-brandPrimary transition-all duration-200">
-                <Link to="/services">Services</Link>
+                <NavLink to="/services">Services</NavLink>
               </li>
               <li className="hover:text-brandPrimary transition-all duration-200">
-                <Link to="/blog">Blog</Link>
+                <NavLink to="/blog">Blog</NavLink>
               </li>
               <li className="hover:text-brandPrimary transition-all duration-200">
-                <Link to="/case-studies"> Case Studies</Link>
+                <NavLink to="/case-studies"> Case Studies</NavLink>
               </li>
               <li className="hover:text-brandPrimary transition-all duration-200">
-                <Link to="/page">Page</Link>
+                <NavLink to="/page">Page</NavLink>
               </li>
             </ul>
           </div>

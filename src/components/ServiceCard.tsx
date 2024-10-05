@@ -8,7 +8,7 @@ const ServiceCard = () => {
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium dolor…
       </p>
-      <button className="btn-outline">
+      <button className="btn-service">
         Exolore now <HiArrowUpRight />
       </button>
       <div>

@@ -14,10 +14,22 @@
   @apply px-5 py-2 bg-[#9867FF1A] flex justify-center items-center font-bold text-brandPrimary hover:text-white text-xs rounded-full hover:bg-[#7d49ee] transition-all duration-200;
 }
 
-.btn-outline {
-  @apply text-brandPrimary flex items-center gap-1 mt-2 border-b border-brandPrimary pb-1;
+.btn-service {
+  @apply text-brandPrimary  flex items-center gap-1 mt-2 border-b border-brandPrimary pb-1;
 }
 body {
   max-width: 2400px;
   margin: auto;
+}
+
+p {
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.active-links li a:active {
+  color: #9867ff;
 }

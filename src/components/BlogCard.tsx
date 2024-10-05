@@ -1,11 +1,11 @@
 import { HiArrowUpRight } from 'react-icons/hi2';
 
-const ArticaleSliderCard = () => {
+const BlogCard = () => {
   return (
     <div className="card  bg-base-100 w-full shadow-xl">
-      <figure>
+      <figure className="h-1/2">
         <img
-          className="w-10/12 h-[200px] mx-auto rounded-md"
+          className="w-full h-full mx-auto rounded-md"
           src="https://s3-alpha-sig.figma.com/img/e821/35d0/e98caddaed606b8c4c217a476780ab9c?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b9ZtyDYBSnFdK~J5sOOhXT0nJcjhzvR81JNTqfkOjIXqEDK~k5XxM3LPKzeEwmzXJDrWNz-oQErVKGiVdaC3CnIUDwg5cqKPbM2QDd~Ag7Q65Jygi4zhQEZyIDFq0QcMSiyX96hdRxAWT9Oq-eCY6XedFS0Mg3-ACVZ9nE1pUGP86CfCcaNIyZ4KE~ILXF5VIUXVtouLR~tMpv~F~tc4qL9YiWHHR1fOyOhEu2cmHy7BVgxqTJEP2sntOJ7emwKBK7zPuyFlnFauT5bzax7JfzM1WFqG1CwE8ei-Ur2Ed8mit4F7iiOHGl1yOFVzo3Yrcslqfyp0h6Lpdwg-qT8I5w__"
           alt="slider image"
         />
@@ -27,4 +27,4 @@ const ArticaleSliderCard = () => {
   );
 };
 
-export default ArticaleSliderCard;
+export default BlogCard;

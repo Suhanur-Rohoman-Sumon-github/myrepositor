@@ -3,6 +3,8 @@ import MainLayouts from '../layouts/MainLayouts';
 import About from '../pages/About/About';
 import Services from '../pages/Services/Services';
 import Home from '../pages/Home/Home/Home';
+import CaseStudies from '../pages/CaseStudies/CaseStudies';
+import Blog from '../pages/Blog/Blog';
 
 const route = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const route = createBrowserRouter([
       {
         path: '/services',
         element: <Services />,
+      },
+      {
+        path: '/case-studies',
+        element: <CaseStudies />,
+      },
+      {
+        path: '/blog',
+        element: <Blog />,
       },
     ],
   },

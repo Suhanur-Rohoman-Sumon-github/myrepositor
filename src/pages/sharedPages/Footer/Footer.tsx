@@ -3,7 +3,7 @@ import Container from '../../../components/Container';
 
 const Footer = () => {
   return (
-    <div className="bg-brandPrimary">
+    <div className="bg-brandPrimary mt-[116px]">
       <Container>
         <footer className="footer  text-white  p-10">
           <aside className="w-1/2 space-y-3">

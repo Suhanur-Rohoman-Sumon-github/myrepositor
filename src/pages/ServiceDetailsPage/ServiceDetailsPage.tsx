@@ -11,7 +11,7 @@ type TResponse = {
 
 const ServiceDetailsPage = () => {
   const serviceData = useLoaderData();
-  const { category, description, image, name, price, frequency } = (
+  const { category, description, image, name, price } = (
     serviceData as TResponse
   ).data as TService;
   return (

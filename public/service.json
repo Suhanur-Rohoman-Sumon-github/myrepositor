@@ -1,0 +1,300 @@
+[
+  {
+    "name": "SEO Services - NTM Monthly Website Maintenance",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-RqAf61m4caInWc8mr_Ix7l7rHWqrmk5EPsU4z_c8vpFksxtjsQfa5UWhulab96Sf9J8&usqp=CAU",
+    "price": "25.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Ongoing website maintenance to ensure your site is secure, updated, and performing at its best.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "All In One SEO",
+    "image": "https://i0.wp.com/www.shoutmeloud.com/wp-content/uploads/2020/11/Setup-All-in-One-SEO-Pack.jpg?resize=1024%2C576&ssl=1",
+    "price": "49.00",
+    "currency": "USD",
+    "description": "Comprehensive SEO services that cover all aspects of optimizing your website for search engines.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Search Engine Optimization: Basic Package",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLoM0kUkl-BZQJiivBw3CKAcgxKt-yFJIjbw&s",
+    "price": "750.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Basic SEO package to help boost your website's rankings in search engine results.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Search Engine Optimization: Premium Package",
+    "image": "https://cdn.botpenguin.com/assets/website/Search_Engine_Optimization_d547319792.webp",
+    "price": "1250.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Premium SEO package with advanced strategies to increase organic traffic and improve search engine rankings.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Local SEO Service: EXP Basic",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIHeH1aMQVFlUDPiTII_N8iHtJEM1PeyjE_g&s",
+    "price": "550.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Basic Local SEO package to improve visibility for local searches.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Search Engine Optimization: Enterprise Package",
+    "image": "https://cdnbbsr.s3waas.gov.in/s3c92a10324374fac681719d63979d00fe/uploads/2023/05/2023102630.png",
+    "price": "1650.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Comprehensive SEO services for enterprises looking to dominate search results.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Local SEO Service: EXP Advance",
+    "image": "https://elitedigitalagency.com/blog/wp-content/uploads/2022/06/iStock-997463524-scaled.jpg",
+    "price": "1050.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Advanced Local SEO package with enhanced targeting for local business growth.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Local SEO Service: EXP Premium",
+    "image": "https://www.reliablesoft.net/wp-content/uploads/2013/02/seo.jpg",
+    "price": "1450.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Premium Local SEO service for maximum local visibility and traffic.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Keywords Research Service: Basic Package",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHYChdISCTjWYRsa2S9_cFx8vMVFndb7quyg&s",
+    "price": "99.00",
+    "currency": "USD",
+    "description": "Basic keyword research service to identify key terms for improving website rankings.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Keywords Research Service: Advance Package",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO0l1h8I4s2wc3ScArX8BMXVuTpI_aKiktJw&s",
+    "price": "139.00",
+    "currency": "USD",
+    "description": "Advanced keyword research service for deeper insights and competitive analysis.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Keywords Research Service: Premium Package",
+    "image": "https://www.webhopers.in/uploads/1/online-keyword-research-tools.png",
+    "price": "199.00",
+    "currency": "USD",
+    "description": "Premium keyword research service offering comprehensive analysis and strategic planning.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Guest Post: Basic",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZd9ET3J1v6Kyo7YslSY5kGhCKKivLxwzzCg&s",
+    "price": "89.00",
+    "currency": "USD",
+    "description": "Basic guest posting service to improve backlink profile and domain authority.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Guest Post: Standard",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgJPqxizVh7Zd-EmzmGLkRacQOiTvU4uYLYw&sges/guest-post-standard.jpg",
+    "price": "169.00",
+    "currency": "USD",
+    "description": "Standard guest posting service with better placement on high-authority blogs.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Guest Post: Premium",
+    "image": "https://www.virlan.co/education/wp-content/uploads/2020/11/Guest-Posting-for-seo.jpg",
+    "price": "239.00",
+    "currency": "USD",
+    "description": "Premium guest posting service offering high-traffic blogs for maximum SEO impact.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Web 2.0: Starter Package",
+    "image": "https://jamiebal.weebly.com/uploads/9/0/1/8/9018481/header_images/1385605437.jpg",
+    "price": "49.00",
+    "currency": "USD",
+    "description": "Starter package for building Web 2.0 properties to improve your online presence.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Web 2.0: Standard Package",
+    "image": "https://i3.wp.com/elancemarket.com/service/upload/image/custom_21502.jpg?resize=800,450&quality=20&strip=all&filter=grayscale",
+    "price": "99.00",
+    "currency": "USD",
+    "description": "Standard Web 2.0 package for building high-quality Web 2.0 backlinks.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "Web 2.0: Premium Package",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkx_hbnu_KrHqVT2R6VpVDmZ6i6STKrCR5lw&s",
+    "price": "139.00",
+    "currency": "USD",
+    "description": "Premium Web 2.0 package with more authoritative properties to boost rankings.",
+    "category": "SEO Services"
+  },
+  {
+    "name": "WordPress Website Development",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2rfY3pjwa-Tyc4kJESW2xgcUGwgebQNbo2A&s",
+    "price": "500",
+    "currency": "USD",
+    "description": "Professional WordPress website development with custom themes, plugins, and optimization.",
+    "category": "Web Development",
+    "variants": true,
+    "orderLink": "https://your-website.com/order/wordpress-development"
+  },
+  {
+    "name": "Amazon Affiliate Niche Site Building: Starter",
+    "image": "https://nazmulhasan.net/wp-content/uploads/2021/04/Amazon-Affiliate-Niche-Site-%E2%80%94-Full-Task-List.webp",
+    "price": "799.00",
+    "currency": "USD",
+    "description": "Start your Amazon affiliate business with a custom-built niche site, optimized for conversions.",
+    "category": "Web Development",
+    "orderLink": "https://your-website.com/order/amazon-affiliate-starter"
+  },
+  {
+    "name": "Amazon Affiliate Niche Site Building: EXP Recommended",
+    "image": "https://i0.wp.com/www.shoutmeloud.com/wp-content/uploads/2015/08/WordPress-Themes-for-Micro-Niche-Websites.png?fit=700%2C380&ssl=1",
+    "price": "1199.00",
+    "currency": "USD",
+    "description": "Advanced Amazon affiliate niche site with higher traffic potential and better SEO strategies.",
+    "category": "Web Development",
+    "orderLink": "https://your-website.com/order/amazon-affiliate-exp-recommended"
+  },
+  {
+    "name": "Amazon Affiliate Niche Site Building: Premium",
+    "image": "https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-amazon-affiliate-websites-1.png",
+    "price": "1999.00",
+    "currency": "USD",
+    "description": "Premium Amazon affiliate niche site with advanced customization and SEO to maximize revenue.",
+    "category": "Web Development",
+    "orderLink": "https://your-website.com/order/amazon-affiliate-premium"
+  },
+
+  {
+    "name": "Social Media Marketing: Starter Pack",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtaEjs3WJGQcDWUByrVNrjdc20CK5z6vmOQQ&s",
+    "price": "99.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Starter package for managing social media accounts with basic content creation and posting.",
+    "category": "Social Media Marketing",
+    "orderLink": "https://your-website.com/order/social-media-starter-pack"
+  },
+  {
+    "name": "Social Media Marketing: Pro Package",
+    "image": "https://images.ctfassets.net/bi6dxri87l5s/6iN8LBBKo9HKqJ6G4xg2fR/e5ae24252772dad042fd56a448942287/img.jpg?w=1440",
+    "price": "149.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Pro package for enhanced social media management, content creation, and audience engagement.",
+    "category": "Social Media Marketing",
+    "orderLink": "https://your-website.com/order/social-media-pro-package"
+  },
+  {
+    "name": "Social Media Marketing: Enterprise Package",
+    "image": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/nlXdwUw75SU6P63xQ4Nm/media/660c60c9eb87d54528c84058.jpeg",
+    "price": "249.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Comprehensive social media management for large businesses, including advanced content strategies and paid campaigns.",
+    "category": "Social Media Marketing",
+    "orderLink": "https://your-website.com/order/social-media-enterprise-package"
+  },
+  {
+    "name": "WordPress Speed Optimization Service: Basic",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_7ITB8vVmrb7elotNI5YJAS2c765PMbOuKQ&s",
+    "price": "49.00",
+    "currency": "USD",
+    "description": "Basic WordPress speed optimization to improve loading times and overall site performance.",
+    "category": "Support and Reporting",
+    "orderLink": "https://your-website.com/order/wordpress-speed-optimization-basic"
+  },
+  {
+    "name": "WordPress Speed Optimization Service: Advance Pack",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ6Rk05Q3qlbFIYw2pHWEtWWU9wZClWe8pHA&s",
+    "price": "79.00",
+    "currency": "USD",
+    "description": "Advanced WordPress optimization including image compression, caching, and database cleaning.",
+    "category": "Support and Reporting",
+    "orderLink": "https://your-website.com/order/wordpress-speed-optimization-advance"
+  },
+  {
+    "name": "WordPress Speed Optimization Service: Premium Pack",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvygjTZ-kjm3vV9QKYvxdm0GAiqLzi0wgvWA&s",
+    "price": "119.00",
+    "currency": "USD",
+    "description": "Premium optimization service offering comprehensive site speed improvements and server-side adjustments.",
+    "category": "Support and Reporting",
+    "orderLink": "https://your-website.com/order/wordpress-speed-optimization-premium"
+  },
+  {
+    "name": "Website Maintenance: Starter Pack",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Y0if2J7Ar0hhTYGhdAV_W2GhuDelp8ZUEg&s",
+    "price": "79.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Starter pack for ongoing website maintenance to keep your site secure and up-to-date.",
+    "category": "Maintenance",
+    "orderLink": "https://your-website.com/order/website-maintenance-starter"
+  },
+  {
+    "name": "Website Maintenance: Standard Pack",
+    "image": "https://marvelmarketing.ca/wp-content/uploads/2023/06/Website-Maintenance-Services-by-Marvel-Marketing-1024x853.png",
+    "price": "129.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Standard maintenance pack offering regular updates, backups, and security checks.",
+    "category": "Maintenance",
+    "orderLink": "https://your-website.com/order/website-maintenance-standard"
+  },
+  {
+    "name": "Website Maintenance: Premium Pack",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdFicgpCW5PY2EtcJS1ucaAkkljmjetd_zw&s",
+    "price": "189.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Premium maintenance service with comprehensive support and advanced security features.",
+    "category": "Maintenance",
+    "orderLink": "https://your-website.com/order/website-maintenance-premium"
+  },
+  {
+    "name": "Managed eStore: Woo Starter",
+    "image": "https://www.elegantthemes.com/blog/wp-content/uploads/2022/08/woocommerce-app.jpg",
+    "price": "129.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Starter pack for managing your WooCommerce store with essential features and support.",
+    "category": "Maintenance",
+    "orderLink": "https://your-website.com/order/managed-estore-woo-starter"
+  },
+  {
+    "name": "Managed eStore: Woo Standard",
+    "image": "https://cdn.wedevs.com/uploads/2017/06/Feature-for-Top-websites-using-woocommerce.png",
+    "price": "199.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Standard management pack for your WooCommerce store, including advanced features and support.",
+    "category": "Maintenance",
+    "orderLink": "https://your-website.com/order/managed-estore-woo-standard"
+  },
+  {
+    "name": "Managed eStore: Woo Premium",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRJOH0HKrG3ELwNDAGAiDg0y1q8CuBUyoAXw&s",
+    "price": "299.00",
+    "currency": "USD",
+    "frequency": "monthly",
+    "description": "Premium management service for your WooCommerce store, offering extensive support and optimization.",
+    "category": "Maintenance",
+    "orderLink": "https://your-website.com/order/managed-estore-woo-premium"
+  }
+]

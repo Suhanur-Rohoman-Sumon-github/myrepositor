@@ -1,0 +1,47 @@
+[
+  {
+    "name": "SEO Services - NTM Monthly Website Maintenance",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-RqAf61m4caInWc8mr_Ix7l7rHWqrmk5EPsU4z_c8vpFksxtjsQfa5UWhulab96Sf9J8&usqp=CAU",
+    "price": "25.00",
+    "description": "Ongoing website maintenance to ensure your site is secure, updated, and performing at its best.",
+    "frequency": "monthly",
+    "category": "SEO Services"
+  },
+  {
+    "name": "WordPress Website Development",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2rfY3pjwa-Tyc4kJESW2xgcUGwgebQNbo2A&s",
+    "price": "500",
+    "description": "Professional WordPress website development with custom themes, plugins, and optimization.",
+    "category": "Web Development"
+  },
+  {
+    "name": "Amazon Affiliate Niche Site Building: Starter",
+    "image": "https://nazmulhasan.net/wp-content/uploads/2021/04/Amazon-Affiliate-Niche-Site-%E2%80%94-Full-Task-List.webp",
+    "price": "799.00",
+    "description": "Start your Amazon affiliate business with a custom-built niche site, optimized for conversions.",
+    "category": "Affiliate Niche Sites"
+  },
+  {
+    "name": "Social Media Marketing: Pro Package",
+    "image": "https://images.ctfassets.net/bi6dxri87l5s/6iN8LBBKo9HKqJ6G4xg2fR/e5ae24252772dad042fd56a448942287/img.jpg?w=1440",
+    "price": "149.00",
+    "description": "Pro package for enhanced social media management, content creation, and audience engagement.",
+    "frequency": "monthly",
+    "category": "Social Media Marketing"
+  },
+  {
+    "name": "WordPress Speed Optimization Service: Premium Pack",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvygjTZ-kjm3vV9QKYvxdm0GAiqLzi0wgvWA&s",
+    "price": "119.00",
+    "description": "Premium optimization service offering comprehensive site speed improvements and server-side adjustments.",
+    "category": "Support and Reporting"
+  },
+  {
+    "name": "Website Maintenance: Premium Pack",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdFicgpCW5PY2EtcJS1ucaAkkljmjetd_zw&s",
+    "price": "189.00",
+    "description": "Premium maintenance service with comprehensive support and advanced security features.",
+    "frequency": "monthly",
+    "category": "Maintenance"
+  }
+]

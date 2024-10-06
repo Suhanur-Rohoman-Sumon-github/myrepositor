@@ -1,6 +1,7 @@
 import { HiArrowUpRight } from 'react-icons/hi2';
 
 const BlogCard = () => {
+  // use dummy data for showing card before production use real data and make it dynamic
   return (
     <div className="card  bg-base-100 w-full shadow-xl">
       <figure className="h-1/2">

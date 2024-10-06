@@ -1,8 +1,34 @@
+import { useEffect, useState } from 'react';
 import Container from '../../../components/Container';
 import HeadingText from '../../../components/HeadingText';
-import ServiceCard from '../../../components/ServiceCard';
+import { TService } from '../../Home/OurService/OurService';
+import ServiceCardContainer from '../../../components/ServiceCardContainer';
 
 const ServiceSection = () => {
+  const [services, setServices] = useState([]);
+
+  const seoServices = services.filter(
+    (service: TService) => service.category === 'SEO Services'
+  );
+  const webDevelopmentServices = services.filter(
+    (service: TService) => service.category === 'Web Development'
+  );
+
+  const socialMediaMarketingServices = services.filter(
+    (service: TService) => service.category === 'Social Media Marketing'
+  );
+  const supportAndReportingServices = services.filter(
+    (service: TService) => service.category === 'Support and Reporting'
+  );
+  const maintenanceServices = services.filter(
+    (service: TService) => service.category === 'Maintenance'
+  );
+
+  useEffect(() => {
+    fetch('service.json')
+      .then(res => res.json())
+      .then(data => setServices(data));
+  }, []);
   return (
     <Container>
       <div className="mt-[116px]">
@@ -11,14 +37,31 @@ const ServiceSection = () => {
           subheading="our services "
           heading="A Leading Global Provider Of Recruitment"
         />
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-        </div>
+        {/* seo services */}
+        <ServiceCardContainer name="SEO Services" services={seoServices} />
+
+        {/* Maintenance Services */}
+        <ServiceCardContainer
+          name="Maintenance Services"
+          services={maintenanceServices}
+        />
+
+        {/* Social Media Marketing */}
+        <ServiceCardContainer
+          name="Social Media Marketing"
+          services={socialMediaMarketingServices}
+        />
+
+        {/* Social Media Marketing */}
+        <ServiceCardContainer
+          name="Support & Reporting"
+          services={supportAndReportingServices}
+        />
+        {/* Web Development */}
+        <ServiceCardContainer
+          name="Web Development"
+          services={webDevelopmentServices}
+        />
       </div>
     </Container>
   );

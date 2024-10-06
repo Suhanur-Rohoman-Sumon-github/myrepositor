@@ -5,6 +5,7 @@ import Services from '../pages/Services/Services';
 import Home from '../pages/Home/Home/Home';
 import CaseStudies from '../pages/CaseStudies/CaseStudies';
 import Blog from '../pages/Blog/Blog';
+import ServiceDetailsPage from '../pages/ServiceDetailsPage/ServiceDetailsPage';
 
 const route = createBrowserRouter([
   {
@@ -22,6 +23,12 @@ const route = createBrowserRouter([
       {
         path: '/services',
         element: <Services />,
+      },
+      {
+        path: '/service/:id',
+        element: <ServiceDetailsPage />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/api/services/${params.id}`),
       },
       {
         path: '/case-studies',

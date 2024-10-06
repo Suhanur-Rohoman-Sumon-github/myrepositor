@@ -7,27 +7,37 @@ import ServiceCardContainer from '../../../components/ServiceCardContainer';
 const ServiceSection = () => {
   const [services, setServices] = useState([]);
 
-  const seoServices = services.filter(
-    (service: TService) => service.category === 'SEO Services'
-  );
-  const webDevelopmentServices = services.filter(
-    (service: TService) => service.category === 'Web Development'
-  );
+  const seoServices =
+    services &&
+    services.filter((service: TService) => service.category === 'SEO Services');
+  const webDevelopmentServices =
+    services &&
+    services.filter(
+      (service: TService) => service.category === 'Web Development'
+    );
 
-  const socialMediaMarketingServices = services.filter(
-    (service: TService) => service.category === 'Social Media Marketing'
-  );
-  const supportAndReportingServices = services.filter(
-    (service: TService) => service.category === 'Support and Reporting'
-  );
-  const maintenanceServices = services.filter(
-    (service: TService) => service.category === 'Maintenance'
-  );
+  const socialMediaMarketingServices =
+    services &&
+    services.filter(
+      (service: TService) => service.category === 'Social Media Marketing'
+    );
+  const supportAndReportingServices =
+    services &&
+    services.filter(
+      (service: TService) => service.category === 'Support and Reporting'
+    );
+  const maintenanceServices =
+    services &&
+    services.filter((service: TService) => service.category === 'Maintenance');
 
   useEffect(() => {
-    fetch('service.json')
+    fetch('http://localhost:5000/api/services')
       .then(res => res.json())
-      .then(data => setServices(data));
+      .then(data => {
+        if (data.success) {
+          setServices(data.data);
+        }
+      });
   }, []);
   return (
     <Container>

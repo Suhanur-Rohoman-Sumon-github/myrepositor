@@ -16,7 +16,7 @@ const ServiceCardContainer = ({
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {services && services.length > 0 ? (
           services.map((service: TService) => (
-            <ServiceCard service={service} key={service.description} />
+            <ServiceCard service={service} key={service._id} />
           ))
         ) : (
           <p>Service is not found</p>

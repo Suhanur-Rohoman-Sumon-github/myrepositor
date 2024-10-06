@@ -5,6 +5,7 @@ import ServiceCard from '../../../components/ServiceCard';
 import { Link } from 'react-router-dom';
 
 export type TService = {
+  _id: string;
   name: string;
   image: string;
   price: string; // price can be a string or a PriceRange object

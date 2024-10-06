@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Breakpoints from '../../components/Breakpoints';
 import HeadingText from '../../components/HeadingText';
 import Container from '../../components/Container';
@@ -14,6 +14,7 @@ const ServiceDetailsPage = () => {
   const { category, description, image, name, price } = (
     serviceData as TResponse
   ).data as TService;
+
   return (
     <div className="mt-[116px]">
       <Breakpoints path="Service,Details" />
@@ -40,7 +41,9 @@ const ServiceDetailsPage = () => {
                   ${price}
                 </span>
               </p>
-              <button className="mt-12 btn-primary">Checkout</button>
+              <Link to={`/payment/${price}`}>
+                <button className="mt-12 btn-primary">Checkout</button>
+              </Link>
             </div>
           </div>
         </div>

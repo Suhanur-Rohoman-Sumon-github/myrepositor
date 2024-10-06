@@ -6,6 +6,7 @@ import Home from '../pages/Home/Home/Home';
 import CaseStudies from '../pages/CaseStudies/CaseStudies';
 import Blog from '../pages/Blog/Blog';
 import ServiceDetailsPage from '../pages/ServiceDetailsPage/ServiceDetailsPage';
+import CheckOutPage from '../pages/CheckoutPage/CheckOutPage';
 
 const route = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const route = createBrowserRouter([
       {
         path: '/blog',
         element: <Blog />,
+      },
+      {
+        path: '/payment/:price',
+        element: <CheckOutPage />,
       },
     ],
   },

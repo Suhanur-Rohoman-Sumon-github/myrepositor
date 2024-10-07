@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Container from '../../../components/Container';
 import { useEffect, useState } from 'react';
 import { FaBars, FaXmark } from 'react-icons/fa6';
@@ -66,7 +66,10 @@ const Navbar = () => {
             </button>
           </div>
           <div className="hidden lg:block">
-            <button className="btn-primary ">Get a Quote</button>
+            <Link to="/login">
+              {' '}
+              <button className="btn-primary ">Login</button>
+            </Link>
           </div>
         </div>
       </Container>

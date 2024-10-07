@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
 import Container from '../../../components/Container';
 import HeadingText from '../../../components/HeadingText';
 import { TService } from '../../Home/OurService/OurService';
 import ServiceCardContainer from '../../../components/ServiceCardContainer';
+import { useGetAllServiceQuery } from '../../../Redux/features/service/serviceApis';
 
 const ServiceSection = () => {
-  const [services, setServices] = useState([]);
+  const { data: servicesResponse } = useGetAllServiceQuery(undefined);
+  const services = servicesResponse?.data;
 
   const seoServices =
     services &&
@@ -30,15 +31,6 @@ const ServiceSection = () => {
     services &&
     services.filter((service: TService) => service.category === 'Maintenance');
 
-  useEffect(() => {
-    fetch('http://localhost:5000/api/services')
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-          setServices(data.data);
-        }
-      });
-  }, []);
   return (
     <Container>
       <div className="mt-[116px]">

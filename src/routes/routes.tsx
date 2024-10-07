@@ -7,6 +7,8 @@ import CaseStudies from '../pages/CaseStudies/CaseStudies';
 import Blog from '../pages/Blog/Blog';
 import ServiceDetailsPage from '../pages/ServiceDetailsPage/ServiceDetailsPage';
 import CheckOutPage from '../pages/CheckoutPage/CheckOutPage';
+import Login from '../pages/Login/Login';
+import Signup from '../pages/Signup/Signup';
 
 const route = createBrowserRouter([
   {
@@ -42,6 +44,14 @@ const route = createBrowserRouter([
       {
         path: '/payment/:price',
         element: <CheckOutPage />,
+      },
+      {
+        path: '/login',
+        element: <Login />,
+      },
+      {
+        path: '/signup',
+        element: <Signup />,
       },
     ],
   },

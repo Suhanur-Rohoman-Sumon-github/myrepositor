@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import Container from '../../components/Container';
 import HeadingText from '../../components/HeadingText';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 import { useEffect, useState } from 'react';
 import { useLoginMutation } from '../../Redux/features/user/userApi';
@@ -17,6 +17,7 @@ interface SignupFormInputs {
 const Login = () => {
   const dispatch = useAppDispatch();
   const [showPassword, setShowPassword] = useState(false); // for password toggle
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -39,8 +40,9 @@ const Login = () => {
           token: userResponse.data.token,
         })
       );
+      navigate('/');
     }
-  }, [userResponse, dispatch]);
+  }, [userResponse, dispatch, navigate]);
   return (
     <Container>
       <div className="mt-[116px] lg:w-1/2 mx-auto">

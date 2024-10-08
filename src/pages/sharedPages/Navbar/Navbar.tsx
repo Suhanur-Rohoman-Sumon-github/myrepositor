@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { FaBars, FaXmark } from 'react-icons/fa6';
 import { useAppDispatch, useAppSelector } from '../../../Redux/hooks/hooks';
 import { logout } from '../../../Redux/features/auth/authSlice';
+import { FaShoppingCart } from 'react-icons/fa';
+import { useGetAllCartQuery } from '../../../Redux/features/cart/cartApis';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,7 +14,9 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const user = useAppSelector(state => state.authTechTuend.user);
   const dispatch = useAppDispatch();
-
+  const { data: cartResponse } = useGetAllCartQuery(undefined);
+  const addedProducts = cartResponse?.data;
+  console.log(addedProducts);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -87,16 +91,26 @@ const Navbar = () => {
           <div className="hidden lg:block">
             {user ? (
               <div className="relative">
-                <div
-                  onClick={() => setShowMenu(!showMenu)}
-                  className="w-12 cursor-pointer h-12 flex justify-center items-center text-white rounded-full relative bg-brandPrimary"
-                >
-                  <p className="text-3xl font-bold">
-                    {
-                      // @ts-ignore
-                      user?.name?.slice(0, 1)
-                    }
-                  </p>
+                <div className="flex gap-5 items-center">
+                  <div className="relative">
+                    <Link to="/cart">
+                      <FaShoppingCart className="text-3xl cursor-pointer text-brandPrimary" />
+                    </Link>
+                    <div className=" w-6 h-6  justify-center items-center bg-red-500 text-xs flex text-white rounded-full absolute -top-3 -right-4 ">
+                      {addedProducts?.length}
+                    </div>
+                  </div>
+                  <div
+                    onClick={() => setShowMenu(!showMenu)}
+                    className="w-12 cursor-pointer h-12 flex justify-center items-center text-white rounded-full relative bg-brandPrimary"
+                  >
+                    <p className="text-3xl font-bold">
+                      {
+                        // @ts-ignore
+                        user?.name?.slice(0, 1)
+                      }
+                    </p>
+                  </div>
                 </div>
                 <div
                   className={`absolute ${

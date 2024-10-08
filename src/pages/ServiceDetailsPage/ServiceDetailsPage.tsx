@@ -1,8 +1,13 @@
-import { useLoaderData } from 'react-router-dom';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Breakpoints from '../../components/Breakpoints';
 import HeadingText from '../../components/HeadingText';
 import Container from '../../components/Container';
 import { TService } from '../Home/OurService/OurService';
+import { useAppSelector } from '../../Redux/hooks/hooks';
+import { useAddedToCartMutation } from '../../Redux/features/cart/cartApis';
+import { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 type TResponse = {
   success: boolean;
   message: string;
@@ -11,10 +16,34 @@ type TResponse = {
 
 const ServiceDetailsPage = () => {
   const serviceData = useLoaderData();
-  const { category, description, image, name, price } = (
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const { category, description, image, name, price, _id } = (
     serviceData as TResponse
   ).data as TService;
+  const user = useAppSelector(state => state.authTechTuend.user);
+  const [addToCart, { data }] = useAddedToCartMutation();
+  const handlerAddToCart = () => {
+    setLoading(true);
+    const cartInfo = {
+      // @ts-ignore
+      user: user._id,
+      service: _id,
+      quantity: 1,
+    };
 
+    addToCart(cartInfo);
+  };
+  console.log(data);
+  useEffect(() => {
+    if (data?.success) {
+      toast.success(data?.message);
+      setLoading(false);
+      navigate('/cart');
+    } else {
+      setLoading(false);
+    }
+  }, [data, navigate]);
   return (
     <div className="mt-[116px]">
       <Breakpoints path="Service,Details" />
@@ -42,7 +71,17 @@ const ServiceDetailsPage = () => {
                 </span>
               </p>
 
-              <button className="mt-12 btn-primary">Add To Cart</button>
+              <button
+                disabled={loading}
+                onClick={handlerAddToCart}
+                className="mt-12 btn-primary"
+              >
+                {loading ? (
+                  <span className="loading loading-spinner loading-md"></span>
+                ) : (
+                  'Add To Cart'
+                )}
+              </button>
             </div>
           </div>
         </div>

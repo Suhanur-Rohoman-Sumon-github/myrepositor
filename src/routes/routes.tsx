@@ -11,6 +11,7 @@ import Login from '../pages/Login/Login';
 import Signup from '../pages/Signup/Signup';
 import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
 import TermsAndConditions from '../pages/Terms&Condition/TermsAndCondition';
+import CartPage from '../pages/CartPage/CartPage';
 
 const route = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const route = createBrowserRouter([
       {
         path: '/terms-condition',
         element: <TermsAndConditions />,
+      },
+      {
+        path: '/cart',
+        element: <CartPage />,
       },
       {
         path: '/login',

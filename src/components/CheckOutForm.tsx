@@ -75,7 +75,7 @@ const CheckOutForm = ({ price }: { price: number }) => {
     if (paymentIntent?.status === 'succeeded') {
       toast.success('Payment success');
       setIsLoading(false);
-      navigate('/services');
+      navigate('/cart');
     } else {
       toast.error('Payment unsuccessfull');
       setIsLoading(false);
@@ -107,7 +107,7 @@ const CheckOutForm = ({ price }: { price: number }) => {
         {isLoading ? (
           <span className="loading loading-spinner loading-md"></span>
         ) : (
-          'Pay'
+          `Pay ($${price})`
         )}
       </button>
     </form>

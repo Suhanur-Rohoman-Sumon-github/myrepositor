@@ -4,6 +4,7 @@ import { RootState } from '../store/store';
 const baseQuery = fetchBaseQuery({
   baseUrl: 'https://techtuend-service-server.vercel.app/api',
   credentials: 'include',
+
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).authTechTuend.token;
 
@@ -14,6 +15,7 @@ const baseQuery = fetchBaseQuery({
 });
 export const baseApi = createApi({
   reducerPath: 'baseUrl',
+  tagTypes: ['services', 'cart'],
   baseQuery: baseQuery,
   endpoints: () => ({}),
 });

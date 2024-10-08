@@ -56,7 +56,10 @@ const Navbar = () => {
                 <NavLink to="/case-studies"> Case Studies</NavLink>
               </li>
               <li className="hover:text-brandPrimary transition-all duration-200">
-                <NavLink to="/page">Page</NavLink>
+                <NavLink to="/privacy-policy">Privacy Policy</NavLink>
+              </li>
+              <li className="hover:text-brandPrimary transition-all duration-200">
+                <NavLink to="/terms-condition">Terms & Condition</NavLink>
               </li>
             </ul>
           </div>

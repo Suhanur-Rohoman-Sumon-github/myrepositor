@@ -9,6 +9,8 @@ import ServiceDetailsPage from '../pages/ServiceDetailsPage/ServiceDetailsPage';
 import CheckOutPage from '../pages/CheckoutPage/CheckOutPage';
 import Login from '../pages/Login/Login';
 import Signup from '../pages/Signup/Signup';
+import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
+import TermsAndConditions from '../pages/Terms&Condition/TermsAndCondition';
 
 const route = createBrowserRouter([
   {
@@ -44,6 +46,14 @@ const route = createBrowserRouter([
       {
         path: '/payment/:price',
         element: <CheckOutPage />,
+      },
+      {
+        path: '/privacy-policy',
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: '/terms-condition',
+        element: <TermsAndConditions />,
       },
       {
         path: '/login',

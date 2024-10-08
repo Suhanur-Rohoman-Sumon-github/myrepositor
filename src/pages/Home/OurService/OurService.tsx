@@ -15,7 +15,7 @@ export type TService = {
 };
 const OurService = () => {
   const { data: servicesRes } = useGetAllServiceQuery(undefined);
-  const services = servicesRes.data;
+  const services = servicesRes?.data;
   return (
     <Container>
       <div className="flex justify-between items-center">

@@ -75,7 +75,7 @@ const CheckOutForm = ({ price }: { price: number }) => {
     if (paymentIntent?.status === 'succeeded') {
       toast.success('Payment success');
       setIsLoading(false);
-      navigate('/');
+      navigate('/services');
     } else {
       toast.error('Payment unsuccessfull');
       setIsLoading(false);

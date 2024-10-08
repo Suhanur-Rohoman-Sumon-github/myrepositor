@@ -31,7 +31,17 @@ const Navbar = () => {
     >
       <Container>
         <div className="flex  h-[116px] justify-between items-center ">
-          <div className="w-fit text-2xl font-bold">TechTuned Services</div>
+          <Link to="/">
+            {' '}
+            <div className="w-fit flex items-center gap-2 text-2xl font-bold">
+              <img
+                className="w-[50px] h-[50px] rounded-full"
+                src="/public/techTuendLogo.png"
+                alt=""
+              />
+              TechTuned Services
+            </div>
+          </Link>
           <div
             className={`lg:static absolute transition-all duration-200 lg:bg-transparent bg-white w-full lg:w-fit ${
               isOpen ? 'left-0 top-24 p-5' : '-left-[100%] top-24 p-5'

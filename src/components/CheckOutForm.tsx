@@ -1,5 +1,6 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { FormEvent, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 
 const CheckOutForm = ({ price }: { price: number }) => {
   const stripe = useStripe();
@@ -70,7 +71,9 @@ const CheckOutForm = ({ price }: { price: number }) => {
       console.log(confirmError);
     }
     if (paymentIntent?.status === 'succeeded') {
-      console.log('payment success');
+      toast.success('Payment success');
+    } else {
+      toast.error('Payment unsuccessfull');
     }
   };
   return (

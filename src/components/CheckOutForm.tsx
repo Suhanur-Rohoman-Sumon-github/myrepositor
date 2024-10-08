@@ -8,7 +8,7 @@ const CheckOutForm = ({ price }: { price: number }) => {
 
   // get the payment secret
   useEffect(() => {
-    fetch('http://localhost:5000/api/payments', {
+    fetch('https://techtuend-service-server.vercel.app/api/payments', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

@@ -33,7 +33,9 @@ const route = createBrowserRouter([
         path: '/service/:id',
         element: <ServiceDetailsPage />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/services/${params.id}`),
+          fetch(
+            `https://techtuend-service-server.vercel.app/api/services/${params.id}`
+          ),
       },
       {
         path: '/case-studies',

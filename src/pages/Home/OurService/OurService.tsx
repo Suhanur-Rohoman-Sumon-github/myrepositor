@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
 import Container from '../../../components/Container';
 import HeadingText from '../../../components/HeadingText';
 import ServiceCard from '../../../components/ServiceCard';
 import { Link } from 'react-router-dom';
+import { useGetAllServiceQuery } from '../../../Redux/features/service/serviceApis';
 
 export type TService = {
   _id: string;
@@ -14,14 +14,8 @@ export type TService = {
   category: string;
 };
 const OurService = () => {
-  const [services, setServices] = useState([]);
-
-  useEffect(() => {
-    fetch('serviceHompage.json')
-      .then(res => res.json())
-      .then(data => setServices(data));
-  }, []);
-
+  const { data: servicesRes } = useGetAllServiceQuery(undefined);
+  const services = servicesRes.data;
   return (
     <Container>
       <div className="flex justify-between items-center">
@@ -39,9 +33,11 @@ const OurService = () => {
       </div>
       <div className="my-12 mb-[116px]  grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {services && services.length > 0 ? (
-          services.map((service: TService) => (
-            <ServiceCard service={service} key={service.description} />
-          ))
+          services
+            .slice(0, 6)
+            .map((service: TService) => (
+              <ServiceCard service={service} key={service.description} />
+            ))
         ) : (
           <p>Service not found</p>
         )}

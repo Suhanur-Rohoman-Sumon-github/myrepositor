@@ -1,12 +1,14 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { FormEvent, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const CheckOutForm = ({ price }: { price: number }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [secretKey, setSecretKey] = useState('');
-
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
   // get the payment secret
   useEffect(() => {
     fetch('https://techtuend-service-server.vercel.app/api/payments', {
@@ -30,7 +32,7 @@ const CheckOutForm = ({ price }: { price: number }) => {
     // We don't want to let default form submission happen here,
     // which would refresh the page.
     event.preventDefault();
-
+    setIsLoading(true);
     if (!stripe || !elements) {
       // Stripe.js hasn't yet loaded.
       // Make sure to disable form submission until Stripe.js has loaded.
@@ -72,8 +74,11 @@ const CheckOutForm = ({ price }: { price: number }) => {
     }
     if (paymentIntent?.status === 'succeeded') {
       toast.success('Payment success');
+      setIsLoading(false);
+      navigate('/');
     } else {
       toast.error('Payment unsuccessfull');
+      setIsLoading(false);
     }
   };
   return (
@@ -94,8 +99,16 @@ const CheckOutForm = ({ price }: { price: number }) => {
           },
         }}
       />
-      <button className="btn btn-primary w-full mt-5" type="submit">
-        Pay
+      <button
+        disabled={isLoading || (!stripe && !elements)}
+        className="btn btn-primary w-full mt-5"
+        type="submit"
+      >
+        {isLoading ? (
+          <span className="loading loading-spinner loading-md"></span>
+        ) : (
+          'Pay'
+        )}
       </button>
     </form>
   );

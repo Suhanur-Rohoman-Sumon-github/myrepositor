@@ -1,5 +1,6 @@
 import { FaFacebook, FaLinkedinIn, FaTwitter } from 'react-icons/fa6';
 import Container from '../../../components/Container';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -7,7 +8,17 @@ const Footer = () => {
       <Container>
         <footer className="footer  text-white  p-10">
           <aside className="w-1/2 space-y-3">
-            <h3 className="text-2xl font-semibold">TechTuned Services</h3>
+            <div className="flex gap-2">
+              {' '}
+              <img
+                className="w-[50px] h-[50px] rounded-full"
+                src="/public/techTuendLogo.png"
+                alt=""
+              />
+              <h4 className="text-2xl font-semibold font-headingFont">
+                TechTuned Services
+              </h4>
+            </div>
             <p>
               We are recruitment agency that help you find more talents to
               develop business
@@ -49,8 +60,12 @@ const Footer = () => {
           </nav>
           <nav>
             <h6 className="footer-title">Legal</h6>
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
+            <Link to="/terms-condition" className="link link-hover">
+              Terms of use
+            </Link>
+            <Link to="/privacy-policy" className="link link-hover">
+              Privacy policy
+            </Link>
             <a className="link link-hover">Cookie policy</a>
           </nav>
         </footer>

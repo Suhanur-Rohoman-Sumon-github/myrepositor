@@ -44,20 +44,7 @@ const Footer = () => {
               </button>
             </div>
           </aside>
-          <nav>
-            <h6 className="footer-title">Services</h6>
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
-          </nav>
-          <nav>
-            <h6 className="footer-title">Company</h6>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
-          </nav>
+
           <nav>
             <h6 className="footer-title">Legal</h6>
             <Link to="/terms-condition" className="link link-hover">
@@ -67,6 +54,28 @@ const Footer = () => {
               Privacy policy
             </Link>
             <a className="link link-hover">Cookie policy</a>
+          </nav>
+          <nav>
+            <h6 className="footer-title">Company</h6>
+            <Link to="/about" className="link link-hover">
+              About us
+            </Link>
+            <Link to="/contact" className="link link-hover">
+              Contact
+            </Link>
+            <a className="link link-hover">Jobs</a>
+            <a className="link link-hover">Press kit</a>
+          </nav>
+          <nav>
+            <h6 className="footer-title">Paymenst Methods</h6>
+            <div>
+              <img
+                className="w-[50px] h-[50px] rounded-full"
+                src="https://cdn.brandfetch.io/idxAg10C0L/w/400/h/400/theme/dark/icon.jpeg?k=id64Mup7ac&t=1698141908115"
+                alt=""
+              />
+              <p>Stripe Payments </p>
+            </div>
           </nav>
         </footer>
       </Container>

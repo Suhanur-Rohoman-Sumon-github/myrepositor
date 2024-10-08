@@ -1,5 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// type TState = {
+//   user: TUser;
+//   token: string;
+// };
+
 const initialState = {
   user: '',
   token: '',

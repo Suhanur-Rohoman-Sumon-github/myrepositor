@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import Breakpoints from '../../components/Breakpoints';
 import HeadingText from '../../components/HeadingText';
 import Container from '../../components/Container';

@@ -2,10 +2,15 @@ import { Link, NavLink } from 'react-router-dom';
 import Container from '../../../components/Container';
 import { useEffect, useState } from 'react';
 import { FaBars, FaXmark } from 'react-icons/fa6';
+import { useAppDispatch, useAppSelector } from '../../../Redux/hooks/hooks';
+import { logout } from '../../../Redux/features/auth/authSlice';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const user = useAppSelector(state => state.authTechTuend.user);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,10 +84,39 @@ const Navbar = () => {
             </button>
           </div>
           <div className="hidden lg:block">
-            <Link to="/login">
-              {' '}
-              <button className="btn-primary ">Login</button>
-            </Link>
+            {user ? (
+              <div className="relative">
+                <div
+                  onClick={() => setShowMenu(!showMenu)}
+                  className="w-12 cursor-pointer h-12 flex justify-center items-center text-white rounded-full relative bg-brandPrimary"
+                >
+                  <p className="text-3xl font-bold">
+                    {user?.name?.slice(0, 1)}
+                  </p>
+                </div>
+                <div
+                  className={`absolute ${
+                    showMenu ? 'block' : 'hidden'
+                  } -left-12 w-52 -bottom-[150px] shadow-lg rounded-md bg-white text-black p-5`}
+                >
+                  <div>
+                    <h4 className="text-xl font-semibold">{user?.name}</h4>
+                    <p>{user?.email}</p>
+                  </div>
+                  <button
+                    onClick={() => dispatch(logout())}
+                    className="btn-primary mt-3"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <Link to="/login">
+                {' '}
+                <button className="btn-primary ">Login</button>
+              </Link>
+            )}
           </div>
         </div>
       </Container>

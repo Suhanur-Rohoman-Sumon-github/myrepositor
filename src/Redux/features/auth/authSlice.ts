@@ -13,8 +13,8 @@ const authSlice = createSlice({
       state.user = action.payload.user;
       state.token = action.payload.token;
     },
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    logout: (state, _action) => {
+
+    logout: state => {
       state.user = '';
       state.token = '';
     },

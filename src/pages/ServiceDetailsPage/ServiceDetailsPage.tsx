@@ -41,9 +41,8 @@ const ServiceDetailsPage = () => {
                   ${price}
                 </span>
               </p>
-              <Link to={`/payment/${price}`}>
-                <button className="mt-12 btn-primary">Checkout</button>
-              </Link>
+
+              <button className="mt-12 btn-primary">Add To Cart</button>
             </div>
           </div>
         </div>

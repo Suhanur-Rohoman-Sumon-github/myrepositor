@@ -47,7 +47,7 @@ const route = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: '/payment/:price',
+        path: '/payment/:price/:ids',
         element: <CheckOutPage />,
       },
       {

@@ -13,7 +13,7 @@ type TCartItem = {
 const CartPage = () => {
   const { data: cartResponse } = useGetAllCartQuery(undefined);
   const cartServices = cartResponse?.success ? cartResponse.data : [];
-
+  const ids = cartServices.map((item: TCartItem) => item._id);
   const totalCost =
     cartServices &&
     cartServices?.reduce(
@@ -50,7 +50,7 @@ const CartPage = () => {
             <p className="font-semibold flex justify-between items-center gap-10">
               Subtotal: <span className="text-red-500">${totalCost}</span>
             </p>
-            <Link to={`/payment/${totalCost}`}>
+            <Link to={`/payment/${totalCost}/${ids}`}>
               <button className="btn-primary mt-5">Checkout</button>
             </Link>
           </div>

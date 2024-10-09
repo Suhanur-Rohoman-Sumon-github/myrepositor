@@ -7,7 +7,9 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import './CheckoutPage.css';
 const CheckOutPage = () => {
-  const { price } = useParams();
+  const { price, ids } = useParams();
+
+  const arrayOfIds = ids?.split(',');
   const priceInNumnber = parseFloat(price as string);
   const stripePromise = loadStripe(
     'pk_test_51OaW7SA36EHsCe9dKWgajsjH1lrsZ0a07POTljAYtkgaJD4SP1u6Gxr7QeeU67kD88gdAksRjp1GJzoI1oUKAfOl00bfsoroS0'
@@ -23,7 +25,7 @@ const CheckOutPage = () => {
         />
         <div className="mt-12 lg:w-1/2 mx-auto">
           <Elements stripe={stripePromise}>
-            <CheckOutForm price={priceInNumnber} />
+            <CheckOutForm ids={arrayOfIds as string[]} price={priceInNumnber} />
           </Elements>
         </div>
       </Container>

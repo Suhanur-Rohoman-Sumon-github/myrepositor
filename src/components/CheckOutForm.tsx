@@ -2,13 +2,17 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { FormEvent, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { useDeleteManyCartMutation } from '../Redux/features/cart/cartApis';
 
-const CheckOutForm = ({ price }: { price: number }) => {
+const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [secretKey, setSecretKey] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const [deleteManyCart, { data: deltedResponse }] =
+    useDeleteManyCartMutation();
+
   // get the payment secret
   useEffect(() => {
     fetch('https://techtuend-service-server.vercel.app/api/payments', {
@@ -70,17 +74,22 @@ const CheckOutForm = ({ price }: { price: number }) => {
         },
       });
     if (confirmError) {
-      console.log(confirmError);
+      toast.error(confirmError?.message as string);
     }
     if (paymentIntent?.status === 'succeeded') {
       toast.success('Payment success');
       setIsLoading(false);
-      navigate('/cart');
+      deleteManyCart(ids);
     } else {
       toast.error('Payment unsuccessfull');
       setIsLoading(false);
     }
   };
+  useEffect(() => {
+    if (deltedResponse?.success) {
+      navigate('/services');
+    }
+  }, [deltedResponse, navigate]);
   return (
     <form onSubmit={handleSubmit}>
       <CardElement

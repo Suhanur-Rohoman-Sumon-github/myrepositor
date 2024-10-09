@@ -38,13 +38,13 @@ const Articalse = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <BlogCard />
+              <BlogCard img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCeFFQCHg4OkwtcgbTzrHwaMlEdvAYmnn9Wg&s" />
             </SwiperSlide>
             <SwiperSlide>
-              <BlogCard />
+              <BlogCard img="https://www.theminimalists.com/wp-content/uploads/2019/01/how-to-start-a-blog-in-2020.jpg" />
             </SwiperSlide>
             <SwiperSlide>
-              <BlogCard />
+              <BlogCard img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyTfiUIzxhWa9dNhVte3RvMeeyA6wfbnoORQ&s" />
             </SwiperSlide>
           </Swiper>
         </div>

@@ -16,7 +16,7 @@ const Navbar = () => {
   const dispatch = useAppDispatch();
   const { data: cartResponse } = useGetAllCartQuery(undefined);
   const addedProducts = cartResponse?.data;
-  console.log(addedProducts);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {

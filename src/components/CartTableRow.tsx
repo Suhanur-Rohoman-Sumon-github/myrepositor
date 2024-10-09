@@ -1,7 +1,10 @@
-import { FaMinus, FaPlus } from 'react-icons/fa6';
-import { useUpdateQuantityMutation } from '../Redux/features/cart/cartApis';
+import { FaMinus, FaPlus, FaXmark } from 'react-icons/fa6';
+import {
+  useDeleteCartMutation,
+  useUpdateQuantityMutation,
+} from '../Redux/features/cart/cartApis';
 import toast from 'react-hot-toast';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const CartTableRow = ({
   item,
@@ -16,7 +19,7 @@ const CartTableRow = ({
   const { name, price } = item.service;
   const [updateQuantity] = useUpdateQuantityMutation();
   const [loading, setLoading] = useState(false);
-
+  const [deleteCart, { data }] = useDeleteCartMutation();
   const handlerIncreaseQuanity = async () => {
     setLoading(true);
     if (item.quantity) {
@@ -34,10 +37,19 @@ const CartTableRow = ({
       setLoading(false);
     }
   };
-  console.log(loading);
+
+  useEffect(() => {
+    if (data?.success) {
+      toast.success(data?.message);
+    }
+  }, [data]);
   return (
     <tr className={`${loading ? 'opacity-40' : 'opacity-100'}`}>
-      <th></th>
+      <th>
+        <button onClick={() => deleteCart(item._id)}>
+          <FaXmark />
+        </button>
+      </th>
       <td>{name as string}</td>
       <td className="text-red-500">${price as string}</td>
       <td className="flex gap-3 items-center">

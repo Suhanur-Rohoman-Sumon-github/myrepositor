@@ -1,7 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { baseApi } from '../baseApi/baseApi';
 import { authReducer } from '../features/auth/authSlice';
-import { persistStore, persistReducer } from 'redux-persist';
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 const persistConfig = { key: 'auth', storage };
@@ -12,7 +21,11 @@ const store = configureStore({
     authTechTuend: persistedReducer,
   },
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(baseApi.middleware),
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }).concat(baseApi.middleware),
 });
 
 export default store;

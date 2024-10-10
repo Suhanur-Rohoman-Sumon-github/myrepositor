@@ -349,7 +349,7 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
             Subtotal: <span className="text-red-500">${price}</span>
           </p>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center px-4">
           <h3 className=" my-5 font-bold font-headingFont">Credit Cards</h3>
           <div className="flex items-center gap-2">
             <img

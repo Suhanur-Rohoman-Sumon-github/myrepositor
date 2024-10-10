@@ -19,7 +19,7 @@ const CheckOutPage = () => {
       <Breakpoints path="payment" />
       <Container>
         <HeadingText
-          style="lg:w-1/2 mx-auto text-center"
+          style="lg:w-1/2 mt-12 mx-auto text-center"
           subheading="payments"
           heading="Stripe Payment System"
         />

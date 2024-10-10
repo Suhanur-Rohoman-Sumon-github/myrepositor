@@ -50,7 +50,6 @@ const Navbar = () => {
                 src="/techTuendLogo.png"
                 alt=""
               />
-              SEO IDEA PLANET SERVICE
             </div>
           </Link>
           <div

@@ -6,7 +6,7 @@ import Container from '../../components/Container';
 import HeadingText from '../../components/HeadingText';
 import { useGetAllCartQuery } from '../../Redux/features/cart/cartApis';
 import { useAppSelector } from '../../Redux/hooks/hooks';
-type TCartItem = {
+export type TCartItem = {
   _id: string;
   user: string;
   quantity: number;

@@ -23,7 +23,7 @@ const CheckOutPage = () => {
           subheading="payments"
           heading="Stripe Payment System"
         />
-        <div className="mt-12 lg:w-1/2 mx-auto">
+        <div className="mt-12 w-full mx-auto">
           <Elements stripe={stripePromise}>
             <CheckOutForm ids={arrayOfIds as string[]} price={priceInNumnber} />
           </Elements>

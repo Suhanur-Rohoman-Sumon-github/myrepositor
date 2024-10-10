@@ -142,23 +142,23 @@ const Footer = () => {
             <h6 className="footer-title text-lg font-bold mb-3">Payments</h6>
             <div className="flex items-center gap-2">
               <img
-                className="w-12 h-12  rounded-full"
+                className="w-8 h-6 rounded"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOsJUPXMDaZXyJA2PxFYv2gEVkGofB0fsyQ&s"
                 alt=""
               />
               <img
-                className="w-12 h-12  rounded-full"
+                className="w-8 h-6 rounded"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToJHTQcSmS0EhhMlMbQhhYhhY2b8Xy-QBkkA&s"
                 alt=""
               />
               <img
-                className="w-12 h-12  rounded-full"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdoGGjkkP5qb9H1KKyAmgYB1rMdwxANNDnRjyuOCldFQ36MfQo5cR4SIj2ZMjl19wBPZk&usqp=CAU"
+                className="w-8 h-6 rounded"
+                src="https://static-00.iconduck.com/assets.00/discover-icon-2048x1313-4euh7fjo.png"
                 alt=""
               />
               <img
-                className="w-12 h-12  rounded-full"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVzKAavG-adXiPOhhYj2Er2fI32SRF_-kXzg&s"
+                className="w-8 scale-150 h-6 rounded"
+                src="https://www.svgrepo.com/show/328148/amex.svg"
                 alt=""
               />
             </div>

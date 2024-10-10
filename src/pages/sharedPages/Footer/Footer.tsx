@@ -46,25 +46,22 @@ const Footer = () => {
             </div>
             <p>26 James Street, Southampton, United Kingdom, SO14 1PJ</p>
 
-            <div className="flex gap-2">
+            <div className="flex items-center text-white text-xl gap-4">
               <Link
                 target="_blank"
                 to="https://www.facebook.com/profile.php?id=61566783665410"
-                className="p-5 rounded-full border"
               >
                 <FaFacebook />
               </Link>
               <Link
                 target="_blank"
                 to="https://www.linkedin.com/in/seoidea-planet-service-782298332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                className="p-5 rounded-full border"
               >
                 <FaLinkedinIn />
               </Link>
               <Link
                 target="_blank"
                 to="https://youtube.com/@seoideaplanetservice?si=CVq5aoylA-F97oC-"
-                className="p-5 rounded-full border"
               >
                 <FaYoutube />
               </Link>

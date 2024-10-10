@@ -12,6 +12,9 @@ import Signup from '../pages/Signup/Signup';
 import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
 import TermsAndConditions from '../pages/Terms&Condition/TermsAndCondition';
 import CartPage from '../pages/CartPage/CartPage';
+import Support from '../pages/Support/Support';
+import ContactPage from '../pages/ContactPage/ContactPage';
+import WhySEOIdeaPlanetService from '../pages/WhyWeAre/WhyWeAre';
 
 const route = createBrowserRouter([
   {
@@ -61,6 +64,18 @@ const route = createBrowserRouter([
       {
         path: '/cart',
         element: <CartPage />,
+      },
+      {
+        path: '/support',
+        element: <Support />,
+      },
+      {
+        path: '/contact-us',
+        element: <ContactPage />,
+      },
+      {
+        path: '/why-we-are',
+        element: <WhySEOIdeaPlanetService />,
       },
       {
         path: '/login',

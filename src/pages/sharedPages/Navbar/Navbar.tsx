@@ -49,7 +49,7 @@ const Navbar = () => {
                 src="/public/techTuendLogo.png"
                 alt=""
               />
-              TechTuned Services
+              SEO IDEA PLANET SERVICE
             </div>
           </Link>
           <div

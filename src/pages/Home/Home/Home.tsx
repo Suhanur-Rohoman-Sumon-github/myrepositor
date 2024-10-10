@@ -1,3 +1,4 @@
+import ScrollToTop from '../../../utils/scrollTop';
 import AdvertosimgSection from '../AdvertisingSection/AdvertosimgSection';
 import Articalse from '../Articales/Articalse';
 import CallBackSection from '../CallBackSection/CallBackSection';
@@ -13,6 +14,7 @@ import WhoWeAreSection from '../WhoWeAreSection/WhoWeAreSection';
 const Home = () => {
   return (
     <>
+      <ScrollToTop />
       <HeroSection />
       <AdvertosimgSection />
       <WhoWeAreSection />

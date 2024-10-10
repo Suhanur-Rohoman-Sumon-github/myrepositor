@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { useNavigate } from 'react-router-dom';
 import Breakpoints from '../../components/Breakpoints';
 import CartTableRow from '../../components/CartTableRow';
 import Container from '../../components/Container';
 import HeadingText from '../../components/HeadingText';
 import { useGetAllCartQuery } from '../../Redux/features/cart/cartApis';
+import { useAppSelector } from '../../Redux/hooks/hooks';
 type TCartItem = {
   _id: string;
   user: string;
@@ -11,7 +13,10 @@ type TCartItem = {
   service: Record<string, unknown>;
 };
 const CartPage = () => {
-  const { data: cartResponse } = useGetAllCartQuery(undefined);
+  const navigate = useNavigate();
+  const user = useAppSelector(state => state.authTechTuend.user);
+  // @ts-ignore
+  const { data: cartResponse } = useGetAllCartQuery(user.email);
   const cartServices = cartResponse?.success ? cartResponse.data : [];
   const ids = cartServices.map((item: TCartItem) => item._id);
   const totalCost =
@@ -22,6 +27,9 @@ const CartPage = () => {
           item?.quantity) as number,
       0
     );
+  const handlerCheckout = () => {
+    navigate(`/payment/${totalCost}/${ids}`);
+  };
   return (
     <div className="mt-[116px]">
       <Breakpoints path="Cart" />
@@ -50,9 +58,18 @@ const CartPage = () => {
             <p className="font-semibold flex justify-between items-center gap-10">
               Subtotal: <span className="text-red-500">${totalCost}</span>
             </p>
-            <Link to={`/payment/${totalCost}/${ids}`}>
-              <button className="btn-primary mt-5">Checkout</button>
-            </Link>
+
+            <button
+              onClick={handlerCheckout}
+              disabled={!totalCost || !ids}
+              className={` mt-5 ${
+                !totalCost || !ids
+                  ? 'bg-slate-400 px-8 py-2 rounded-full'
+                  : 'btn-primary'
+              }`}
+            >
+              Checkout
+            </button>
           </div>
           <div className="lg:w-3/4   ">
             <div className="overflow-x-auto">

@@ -33,8 +33,8 @@ const cartApis = baseApi.injectEndpoints({
       invalidatesTags: ['cart'],
     }),
     getAllCart: builder.query({
-      query: () => ({
-        url: '/cart',
+      query: email => ({
+        url: `/cart/${email}`,
         method: 'GET',
       }),
       providesTags: ['cart'],

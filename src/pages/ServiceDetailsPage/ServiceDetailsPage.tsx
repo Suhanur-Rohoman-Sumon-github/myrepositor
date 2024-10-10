@@ -17,6 +17,7 @@ type TResponse = {
 const ServiceDetailsPage = () => {
   const serviceData = useLoaderData();
   const navigate = useNavigate();
+
   const [loading, setLoading] = useState(false);
   const { category, description, image, name, price, _id } = (
     serviceData as TResponse
@@ -30,6 +31,8 @@ const ServiceDetailsPage = () => {
       user: user._id,
       service: _id,
       quantity: 1,
+      // @ts-ignore
+      email: user?.email,
     };
 
     addToCart(cartInfo);

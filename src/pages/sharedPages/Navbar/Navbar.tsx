@@ -14,7 +14,8 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const user = useAppSelector(state => state.authTechTuend.user);
   const dispatch = useAppDispatch();
-  const { data: cartResponse } = useGetAllCartQuery(undefined);
+  // @ts-ignore
+  const { data: cartResponse } = useGetAllCartQuery(user?.email);
   const addedProducts = cartResponse?.data;
 
   useEffect(() => {

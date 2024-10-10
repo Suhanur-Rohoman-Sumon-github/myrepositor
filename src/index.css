@@ -30,6 +30,6 @@ p {
   text-align: left;
 }
 
-.active-links li a:active {
+.active-links li a.active {
   color: #9867ff;
 }

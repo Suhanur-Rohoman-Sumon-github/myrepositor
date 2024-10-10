@@ -37,7 +37,7 @@ const Footer = () => {
               {' '}
               <img
                 className="w-[50px] h-[50px] rounded-full"
-                src="/public/techTuendLogo.png"
+                src="/techTuendLogo.png"
                 alt=""
               />
               <h4 className="text-xl font-semibold font-headingFont">

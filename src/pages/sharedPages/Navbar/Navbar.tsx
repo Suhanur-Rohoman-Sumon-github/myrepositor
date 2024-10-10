@@ -47,7 +47,7 @@ const Navbar = () => {
             <div className="w-fit flex items-center gap-2 text-2xl font-bold">
               <img
                 className="w-[50px] h-[50px] rounded-full"
-                src="/public/techTuendLogo.png"
+                src="/techTuendLogo.png"
                 alt=""
               />
               SEO IDEA PLANET SERVICE

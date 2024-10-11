@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 import LeadershipCard from "../../../components/LeadershipCard";
+
 const LeadershipSection = () => {
   return (
     <Container>
@@ -17,17 +18,24 @@ const LeadershipSection = () => {
       />
       <div className="w-full p-5 my-12">
         <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
+          slidesPerView={3}
+          spaceBetween={30} // More spacing between slides
           freeMode={true}
           pagination={{
             clickable: true,
           }}
           modules={[FreeMode, Pagination]}
-          className="mySwiper"
+          className="w-full"
         >
+          {/* Create multiple slides to simulate grid-like behavior */}
           <SwiperSlide>
-            <LeadershipCard />
+            <LeadershipCard name="Hadiuzzaman Himel" title="CEO" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <LeadershipCard name="Adil Hossain" title="CTO" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <LeadershipCard name="Abdul Motaleb" title="SEO Specialist" />
           </SwiperSlide>
         </Swiper>
       </div>

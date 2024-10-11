@@ -1,5 +1,5 @@
-import Container from '../../../components/Container';
-import HeadingText from '../../../components/HeadingText';
+import Container from "../../../components/Container";
+import HeadingText from "../../../components/HeadingText";
 
 const CallBackSection = () => {
   return (
@@ -9,7 +9,7 @@ const CallBackSection = () => {
           <div className="lg:w-1/2">
             <HeadingText
               style=""
-              heading="Request A Call Back"
+              heading="Request A Replay Back From Us"
               subheading="get a quote"
             />
             <p className="mt-5 text-[#7D7D7D]">

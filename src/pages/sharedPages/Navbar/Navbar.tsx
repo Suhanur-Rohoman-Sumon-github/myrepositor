@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { Link, NavLink } from 'react-router-dom';
-import Container from '../../../components/Container';
-import { useEffect, useState } from 'react';
-import { FaBars, FaXmark } from 'react-icons/fa6';
-import { useAppDispatch, useAppSelector } from '../../../Redux/hooks/hooks';
-import { logout } from '../../../Redux/features/auth/authSlice';
-import { FaShoppingCart } from 'react-icons/fa';
-import { useGetAllCartQuery } from '../../../Redux/features/cart/cartApis';
+import { Link, NavLink } from "react-router-dom";
+import Container from "../../../components/Container";
+import { useEffect, useState } from "react";
+import { FaBars, FaXmark } from "react-icons/fa6";
+import { useAppDispatch, useAppSelector } from "../../../Redux/hooks/hooks";
+import { logout } from "../../../Redux/features/auth/authSlice";
+import { FaShoppingCart } from "react-icons/fa";
+import { useGetAllCartQuery } from "../../../Redux/features/cart/cartApis";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const user = useAppSelector(state => state.authTechTuend.user);
+  const user = useAppSelector((state) => state.authTechTuend.user);
   const dispatch = useAppDispatch();
   // @ts-ignore
   const { data: cartResponse } = useGetAllCartQuery(user?.email);
@@ -28,33 +28,33 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+        isScrolled ? "bg-white shadow-lg" : "bg-transparent"
       }`}
     >
       <Container>
         <div className="flex  h-[116px] justify-between items-center ">
           <Link to="/">
-            {' '}
+            {" "}
             <div className="w-fit flex items-center gap-2 text-2xl font-bold">
               <img
-                className="w-[50px] h-[50px] rounded-full"
-                src="/techTuendLogo.png"
+                className="w-[100px] h-[100px] "
+                src="https://i.ibb.co.com/HPNM20C/Black-and-Blue-Initials-Creative-Logo-removebg-preview.png"
                 alt=""
               />
             </div>
           </Link>
           <div
             className={`lg:static absolute transition-all duration-200 lg:bg-transparent bg-white w-full lg:w-fit ${
-              isOpen ? 'left-0 top-24 p-5' : '-left-[100%] top-24 p-5'
+              isOpen ? "left-0 top-24 p-5" : "-left-[100%] top-24 p-5"
             }`}
           >
             <ul
@@ -70,21 +70,12 @@ const Navbar = () => {
                 <NavLink to="/services">Services</NavLink>
               </li>
               <li className="hover:text-brandPrimary transition-all duration-200">
-                <NavLink to="/blog">Blog</NavLink>
-              </li>
-              <li className="hover:text-brandPrimary transition-all duration-200">
-                <NavLink to="/case-studies"> Case Studies</NavLink>
-              </li>
-              <li className="hover:text-brandPrimary transition-all duration-200">
-                <NavLink to="/privacy-policy">Privacy Policy</NavLink>
-              </li>
-              <li className="hover:text-brandPrimary transition-all duration-200">
-                <NavLink to="/terms-condition">Terms & Condition</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
               </li>
             </ul>
           </div>
           <div className="lg:hidden block">
-            <button onClick={() => setIsOpen(prev => !prev)}>
+            <button onClick={() => setIsOpen((prev) => !prev)}>
               {!isOpen ? <FaBars /> : <FaXmark />}
             </button>
           </div>
@@ -114,7 +105,7 @@ const Navbar = () => {
                 </div>
                 <div
                   className={`absolute ${
-                    showMenu ? 'block' : 'hidden'
+                    showMenu ? "block" : "hidden"
                   } -left-12 w-52 -bottom-[150px] shadow-lg rounded-md bg-white text-black p-5`}
                 >
                   <div>
@@ -141,7 +132,7 @@ const Navbar = () => {
               </div>
             ) : (
               <Link to="/login">
-                {' '}
+                {" "}
                 <button className="btn-primary ">Login</button>
               </Link>
             )}

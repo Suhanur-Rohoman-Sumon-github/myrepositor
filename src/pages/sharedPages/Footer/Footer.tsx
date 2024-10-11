@@ -1,7 +1,7 @@
-import { FaFacebook, FaLinkedinIn, FaYoutube } from 'react-icons/fa6';
-import Container from '../../../components/Container';
-import { Link } from 'react-router-dom';
-import { IoMailOpenOutline } from 'react-icons/io5';
+import { FaFacebook, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import Container from "../../../components/Container";
+import { Link } from "react-router-dom";
+import { IoMailOpenOutline } from "react-icons/io5";
 
 const Footer = () => {
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
                 seoideaplanet@gmail.com
               </Link>
             </p>
-          </div>{' '}
+          </div>{" "}
           <div className="join lg:w-1/2 ">
             <input
               className="input text-black rounded-full join-item w-10/12"
@@ -34,15 +34,12 @@ const Footer = () => {
         <footer className="lg:flex  space-y-5 lg:space-y-0 justify-between gap-10 py-12 text-white  ">
           <aside className="lg:w-1/3  space-y-3">
             <div className="flex items-center gap-2">
-              {' '}
+              {" "}
               <img
-                className="w-[50px] h-[50px] rounded-full"
-                src="/techTuendLogo.png"
+                className="w-[100px] h-[100px] rounded-full"
+                src="https://i.ibb.co.com/MfW4WTn/Black-and-Blue-Initials-Creative-Logo.png"
                 alt=""
               />
-              <h4 className="text-xl font-semibold font-headingFont">
-                SEO IDEA PLANET <br /> SERVICE
-              </h4>
             </div>
             <p>26 James Street, Southampton, United Kingdom, SO14 1PJ</p>
 
@@ -71,7 +68,7 @@ const Footer = () => {
           <nav className="">
             <h6 className="footer-title text-lg font-bold mb-3">Company</h6>
             <div className="flex flex-col gap-1">
-              {' '}
+              {" "}
               <Link to="/about" className="link link-hover  hover:text-white">
                 About Us
               </Link>
@@ -94,7 +91,7 @@ const Footer = () => {
           <nav>
             <h6 className="footer-title text-lg font-bold mb-3">Resources</h6>
             <div className="flex flex-col gap-1">
-              {' '}
+              {" "}
               <Link to="/blog" className="link link-hover  hover:text-white">
                 Blog
               </Link>
@@ -117,7 +114,7 @@ const Footer = () => {
           <nav>
             <h6 className="footer-title text-lg font-bold mb-3">Support</h6>
             <div className="flex flex-col gap-1">
-              {' '}
+              {" "}
               <Link to="/support" className="link link-hover hover:text-white">
                 Support
               </Link>
@@ -132,6 +129,9 @@ const Footer = () => {
                 className="link link-hover  hover:text-white"
               >
                 Privacy Policy
+              </Link>
+              <Link to="/refund" className="link link-hover  hover:text-white">
+                Refund Policy
               </Link>
             </div>
           </nav>

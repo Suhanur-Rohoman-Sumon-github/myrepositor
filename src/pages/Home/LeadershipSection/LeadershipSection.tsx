@@ -1,12 +1,12 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Container from '../../../components/Container';
-import HeadingText from '../../../components/HeadingText';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from "swiper/react";
+import Container from "../../../components/Container";
+import HeadingText from "../../../components/HeadingText";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 // import required modules
-import { FreeMode, Pagination } from 'swiper/modules';
-import LeadershipCard from '../../../components/LeadershipCard';
+import { FreeMode, Pagination } from "swiper/modules";
+import LeadershipCard from "../../../components/LeadershipCard";
 const LeadershipSection = () => {
   return (
     <Container>
@@ -26,18 +26,6 @@ const LeadershipSection = () => {
           modules={[FreeMode, Pagination]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <LeadershipCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <LeadershipCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <LeadershipCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <LeadershipCard />
-          </SwiperSlide>
           <SwiperSlide>
             <LeadershipCard />
           </SwiperSlide>

@@ -1,5 +1,5 @@
-import { FaQuoteRight } from 'react-icons/fa6';
-import Container from '../../../components/Container';
+import { FaQuoteRight } from "react-icons/fa6";
+import Container from "../../../components/Container";
 
 const HappyCoustomer = () => {
   return (
@@ -25,7 +25,7 @@ const HappyCoustomer = () => {
           </p>
           <div>
             <h6 className="text-[18px] font-semibold">James Thomas</h6>
-            <p className="text-xs">UI Designer</p>
+            <p className="text-xs">Seo Specialist</p>
           </div>
         </div>
       </div>

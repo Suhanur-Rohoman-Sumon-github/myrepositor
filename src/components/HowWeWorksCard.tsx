@@ -1,4 +1,4 @@
-import { IconType } from 'react-icons';
+import { IconType } from "react-icons";
 type THowWeWorks = {
   Icon: IconType;
   heading: string;
@@ -10,8 +10,8 @@ const HowWeWorksCard = ({ Icon, heading, subheading }: THowWeWorks) => {
       <p className="w-fit mx-auto p-3 bg-white rounded-full">
         <Icon />
       </p>
-      <h3 className="font-semibold">{heading}</h3>
-      <p>{subheading}</p>
+      <h3 className="font-semibold text-center">{heading}</h3>
+      <p className="text-center">{subheading}</p>
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import Breakpoints from '../../components/Breakpoints';
-import CallBackSection from '../Home/CallBackSection/CallBackSection';
-import WhoWeAreSection from '../Home/WhoWeAreSection/WhoWeAreSection';
+import Breakpoints from "../../components/Breakpoints";
+import CallBackSection from "../Home/CallBackSection/CallBackSection";
+import WhoWeAreSection from "../Home/WhoWeAreSection/WhoWeAreSection";
 
 const ContactPage = () => {
   return (

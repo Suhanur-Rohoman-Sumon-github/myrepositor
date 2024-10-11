@@ -1,5 +1,5 @@
-import Container from '../../../components/Container';
-import './HeroSection.css';
+import Container from "../../../components/Container";
+import "./HeroSection.css";
 const HeroSection = () => {
   return (
     <div className="h-[892px]  overflow-hidden    relative heroSection">
@@ -9,7 +9,7 @@ const HeroSection = () => {
             <h2 className="text-5xl font-bold">
               Boost Your Business with Expert SEO & Web Solutions
             </h2>
-            <p>
+            <p className="text-center">
               From search engine optimization to custom web development and
               ongoing maintenance, we offer tailored solutions to boost your
               online presence and drive measurable results. Let us help you turn

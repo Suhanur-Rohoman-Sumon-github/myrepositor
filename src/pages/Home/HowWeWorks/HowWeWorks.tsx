@@ -1,7 +1,7 @@
-import { FaSearch } from 'react-icons/fa';
-import Container from '../../../components/Container';
-import HeadingText from '../../../components/HeadingText';
-import HowWeWorksCard from '../../../components/HowWeWorksCard';
+import { FaSearch } from "react-icons/fa";
+import Container from "../../../components/Container";
+import HeadingText from "../../../components/HeadingText";
+import HowWeWorksCard from "../../../components/HowWeWorksCard";
 
 const HowWeWorks = () => {
   return (
@@ -16,7 +16,7 @@ const HowWeWorks = () => {
           Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
           suscipit laboriosam, nisi ut aliquid ex ea commodi.
         </p>
-        <div className="grid grid-cols-1 mt-16 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 mt-16 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
           <HowWeWorksCard
             Icon={FaSearch}
             heading="Analysis"

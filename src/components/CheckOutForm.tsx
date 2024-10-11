@@ -1,33 +1,33 @@
-import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import { FormEvent, useEffect, useState } from 'react';
-import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { FormEvent, useEffect, useState } from "react";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import {
   useDeleteManyCartMutation,
   useGetAllCartQuery,
-} from '../Redux/features/cart/cartApis';
-import { useAppSelector } from '../Redux/hooks/hooks';
-import { TCartItem } from '../pages/CartPage/CartPage';
-import { useOrderMutation } from '../Redux/features/Orders/ordersApis';
+} from "../Redux/features/cart/cartApis";
+import { useAppSelector } from "../Redux/hooks/hooks";
+import { TCartItem } from "../pages/CartPage/CartPage";
+import { useOrderMutation } from "../Redux/features/Orders/ordersApis";
 
 const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
-  const user = useAppSelector(state => state.authTechTuend.user);
+  const user = useAppSelector((state) => state.authTechTuend.user);
   const [order, { data: orderRes }] = useOrderMutation();
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    companyName: '',
-    country: '',
-    streetAddress: '',
-    apartment: '',
-    city: '',
-    state: '',
-    zipCode: '',
-    phone: '',
+    firstName: "",
+    lastName: "",
+    companyName: "",
+    country: "",
+    streetAddress: "",
+    apartment: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    phone: "",
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     email: user.email, // Pre-filled with user email
-    orderNotes: '',
+    orderNotes: "",
   });
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
@@ -36,7 +36,7 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
   // stripe vars
   const stripe = useStripe();
   const elements = useElements();
-  const [secretKey, setSecretKey] = useState('');
+  const [secretKey, setSecretKey] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const [deleteManyCart, { data: deltedResponse }] =
@@ -44,15 +44,15 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
 
   // get the payment secret
   useEffect(() => {
-    fetch('https://techtuend-service-server.vercel.app/api/payments', {
-      method: 'POST',
+    fetch("https://techtuend-service-server.vercel.app/api/payments", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json',
+        "content-type": "application/json",
       },
       body: JSON.stringify({ price }),
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         if (data.success) {
           setSecretKey(data.data.clientSecret);
         }
@@ -67,27 +67,27 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
     if (!stripe || !elements) {
       // Stripe.js hasn't yet loaded.
       // Make sure to disable form submission until Stripe.js has loaded.
-      console.log('stripe or elements not found');
-      console.log('stripe not found');
+      console.log("stripe or elements not found");
+      console.log("stripe not found");
       return;
     }
     const card = elements.getElement(CardElement);
 
     if (card == null) {
-      console.log('card not fuound');
+      console.log("card not fuound");
       return;
     }
 
     // Use your card Element with other Stripe.js APIs
     const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: 'card',
+      type: "card",
       card,
     });
 
     if (error) {
-      console.log('[error]', error);
+      console.log("[error]", error);
     } else {
-      console.log('[PaymentMethod]', paymentMethod);
+      console.log("[PaymentMethod]", paymentMethod);
     }
 
     const { paymentIntent, error: confirmError } =
@@ -95,20 +95,20 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
         payment_method: {
           card: card,
           billing_details: {
-            name: 'unknown',
-            email: 'islammdfoisal54@gmail.com',
+            name: "unknown",
+            email: "islammdfoisal54@gmail.com",
           },
         },
       });
     if (confirmError) {
       toast.error(confirmError?.message as string);
     }
-    if (paymentIntent?.status === 'succeeded') {
+    if (paymentIntent?.status === "succeeded") {
       order(formData);
       setIsLoading(false);
       deleteManyCart(ids);
     } else {
-      toast.error('Payment unsuccessfull');
+      toast.error("Payment unsuccessfull");
       setIsLoading(false);
     }
   };
@@ -124,9 +124,9 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
   };
   useEffect(() => {
     if (deltedResponse?.success && orderRes?.success) {
-      toast.success('Payment success');
+      toast.success("Payment success");
       console.log(orderRes);
-      navigate('/services');
+      navigate("/services");
     }
   }, [deltedResponse, navigate, orderRes]);
   return (
@@ -330,7 +330,7 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
       </div>
 
       <div className="lg:w-1/2">
-        <div className="w-full p-4 rounded-md ">
+        <div className="w-full p-4 rounded-md  mt-32">
           <h3 className="font-semibold font-headingFont mb-5">Summary</h3>
           {cartServices &&
             cartServices.length > 0 &&
@@ -339,7 +339,7 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
                 key={item._id}
                 className="flex mb-3 items-center justify-between gap-10"
               >
-                {item?.service?.name as string}{' '}
+                {item?.service?.name as string}{" "}
                 <span className="text-red-500">
                   ${item?.service?.price as string}
                 </span>
@@ -375,19 +375,19 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
           </div>
         </div>
         <div>
-          {' '}
+          {" "}
           <CardElement
             options={{
               style: {
                 base: {
-                  fontSize: '16px',
-                  color: '#424770',
-                  '::placeholder': {
-                    color: '#aab7c4',
+                  fontSize: "16px",
+                  color: "#424770",
+                  "::placeholder": {
+                    color: "#aab7c4",
                   },
                 },
                 invalid: {
-                  color: '#9e2146',
+                  color: "#9e2146",
                 },
               },
             }}

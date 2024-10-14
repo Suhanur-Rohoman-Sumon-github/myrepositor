@@ -16,7 +16,7 @@ const CartTableRow = ({
     quantity: number;
   };
 }) => {
-  const { name, price } = item.service;
+  const { name, price, image } = item.service;
   const [updateQuantity] = useUpdateQuantityMutation();
   const [loading, setLoading] = useState(false);
   const [deleteCart, { data }] = useDeleteCartMutation();
@@ -44,13 +44,17 @@ const CartTableRow = ({
     }
   }, [data]);
   return (
-    <tr className={`${loading ? 'opacity-40' : 'opacity-100'}`}>
+    <tr className={`${loading ? 'opacity-40' : 'opacity-100'} `}>
       <th>
         <button onClick={() => deleteCart(item._id)}>
           <FaXmark />
         </button>
       </th>
-      <td>{name as string}</td>
+      <td className="flex gap-2 items-center">
+        {' '}
+        <img className="w-12 h-12 rounded-md" src={image as string} alt="" />
+        <span className="font-semibold">{name as string}</span>
+      </td>
       <td className="text-red-500">${price as string}</td>
       <td className="flex gap-3 items-center">
         <button

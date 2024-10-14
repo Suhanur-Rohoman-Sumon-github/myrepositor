@@ -188,9 +188,9 @@ const PrivacyPolicy = () => {
           If you have any questions about this Privacy Policy, please contact us
           at:
         </p>
-        <p>Email: support@gmail.com</p>
+        <p>Email: seoideaplanet@gmail.com</p>
         <p>Phone: 01403406419</p>
-        <p>Address: Mirpur 10 , Dhaka,Bangladesh</p>
+        <p>Address: 26 James Street, Southampton, United Kingdom, SO14 1PJ</p>
       </section>
     </div>
   );

@@ -116,7 +116,7 @@ const TermsAndConditions = () => {
       </h2>
       <p className="mb-4">
         If you have any questions about these Terms and Conditions, please
-        contact us at support@gmail.com.
+        contact us at seoideaplanet@gmail.com.
       </p>
     </div>
   );

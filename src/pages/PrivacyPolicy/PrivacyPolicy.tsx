@@ -189,7 +189,7 @@ const PrivacyPolicy = () => {
           at:
         </p>
         <p>Email: seoideaplanet@gmail.com</p>
-        <p>Phone: 01403406419</p>
+        <p>Phone: +447365794280</p>
         <p>Address: 26 James Street, Southampton, United Kingdom, SO14 1PJ</p>
       </section>
     </div>

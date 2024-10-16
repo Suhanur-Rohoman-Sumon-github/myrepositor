@@ -1,9 +1,9 @@
-import Container from '../../../components/Container';
+import Container from "../../../components/Container";
 
 const SubscribedSection = () => {
   return (
     <Container>
-      <div className="bg-[url(/public/subsbg.png)] lg:h-[314px] w-full h-fit rounded-lg p-5 lg:p-0 my-[116px] lg:flex justify-center items-center text-white">
+      <div className="bg-[url(https://i.ibb.co.com/BThzfvL/subsbg.png)] lg:h-[314px] w-full h-fit rounded-lg p-5 lg:p-0 my-[116px] lg:flex justify-center items-center text-white">
         <div className=" p-5 lg:ms-24 w-10/12 mx-auto lg:w-1/3 lg:px-12">
           <h3 className="text-4xl  font-bold">
             Find The Best Talents & Build Relationship

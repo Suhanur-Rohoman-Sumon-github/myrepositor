@@ -1,6 +1,6 @@
-import Container from '../../../components/Container';
-import HeadingText from '../../../components/HeadingText';
-import WhoWeAreCard from '../../../components/WhoWeAreCard';
+import Container from "../../../components/Container";
+import HeadingText from "../../../components/HeadingText";
+import WhoWeAreCard from "../../../components/WhoWeAreCard";
 
 const WhoWeAreSection = () => {
   return (
@@ -15,12 +15,12 @@ const WhoWeAreSection = () => {
           <div className="relative flex justify-center items-center">
             <img
               className=" lg:w-[400px] h-[290px] rounded-lg"
-              src="/public/whoWeare1.jpeg"
+              src="https://i.ibb.co.com/zRmFS2B/who-Weare1.jpg"
               alt=""
             />
             <img
               className="absolute -bottom-24 rounded-lg -right-36"
-              src="/public/whoweare2.jpeg"
+              src="https://i.ibb.co.com/y4K38Wg/whoweare2.jpg"
               alt=""
             />
           </div>

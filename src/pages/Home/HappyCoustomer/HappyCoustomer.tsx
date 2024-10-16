@@ -1,5 +1,5 @@
-import { FaQuoteRight } from 'react-icons/fa6';
-import Container from '../../../components/Container';
+import { FaQuoteRight } from "react-icons/fa6";
+import Container from "../../../components/Container";
 
 const HappyCoustomer = () => {
   return (
@@ -8,7 +8,7 @@ const HappyCoustomer = () => {
         <div className="lg:w-1/2">
           <img
             className="rounded-tr-[120px] h-[394px] rounded-bl-[120px] rounded-s-xl rounded-e-xl"
-            src="/public/happyClients.jpeg"
+            src="https://i.ibb.co.com/D8NPdFj/happy-Clients.jpg"
             alt=""
           />
         </div>

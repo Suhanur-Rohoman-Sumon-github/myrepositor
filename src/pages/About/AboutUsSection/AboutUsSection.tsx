@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import HeadingText from '../../../components/HeadingText';
-import TabContent from '../../../components/TabContent';
+import { useState } from "react";
+import HeadingText from "../../../components/HeadingText";
+import TabContent from "../../../components/TabContent";
 
 const AboutUsSection = () => {
-  const [toggle, setToggle] = useState('mission');
+  const [toggle, setToggle] = useState("mission");
   return (
     <div className=" lg:flex gap-10 my-[116px] justify-between ">
       <div className="lg:w-1/2">
         <img
           className="w-full rounded-r-lg rounded-tr-[200px]"
-          src="/public/aboutus.jpeg"
+          src="https://i.ibb.co.com/dJdGy8m/aboutus.jpg"
           alt=""
         />
       </div>
@@ -27,19 +27,19 @@ const AboutUsSection = () => {
           <div className="flex font-semibold  gap-5 items-center">
             <button
               className={`${
-                toggle === 'mission' &&
-                'text-brandPrimary border-b-2 border-brandPrimary'
+                toggle === "mission" &&
+                "text-brandPrimary border-b-2 border-brandPrimary"
               } pb-1 px-2`}
-              onClick={() => setToggle('mission')}
+              onClick={() => setToggle("mission")}
             >
               Our Mission
             </button>
             <button
               className={`${
-                toggle === 'vission' &&
-                'text-brandPrimary border-b-2 border-brandPrimary'
+                toggle === "vission" &&
+                "text-brandPrimary border-b-2 border-brandPrimary"
               } pb-1 px-2`}
-              onClick={() => setToggle('vission')}
+              onClick={() => setToggle("vission")}
             >
               Our Vission
             </button>
@@ -47,7 +47,7 @@ const AboutUsSection = () => {
           <hr />
           {/* tab content here */}
           <div className="mt-5">
-            {toggle === 'mission' ? (
+            {toggle === "mission" ? (
               <TabContent
                 firstPera="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
                 secondPera="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint."

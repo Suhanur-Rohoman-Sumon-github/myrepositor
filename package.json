@@ -1,6 +1,7 @@
 {
   "name": "techtuned-services",
   "private": true,
+  "homepage": "https://seoideaplanet.com",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

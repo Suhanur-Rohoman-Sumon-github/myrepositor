@@ -1,9 +1,9 @@
-import Container from '../../../components/Container';
-import HeadingText from '../../../components/HeadingText';
+import Container from "../../../components/Container";
+import HeadingText from "../../../components/HeadingText";
 
 const CallBackSection = () => {
   return (
-    <div className="bg-[url(/public/contact.png)] lg:h-[850px]  bg-center bg-cover my-[116px] bg-no-repeat lg:flex justify-between items-center">
+    <div className="bg-[url(https://i.ibb.co.com/YPJj2Xs/contact.png)] lg:h-[850px]  bg-center bg-cover my-[116px] bg-no-repeat lg:flex justify-between items-center">
       <Container>
         <div className="lg:flex justify-between gap-10">
           <div className="lg:w-1/2">
@@ -49,7 +49,11 @@ const CallBackSection = () => {
             </div>
           </div>
           <div className=" relative -top-24">
-            <img className=" w-full" src="/public/contactLady.png" alt="" />
+            <img
+              className=" w-full"
+              src="https://i.ibb.co.com/YhCQDH5/contact-Lady.png"
+              alt=""
+            />
           </div>
         </div>
       </Container>

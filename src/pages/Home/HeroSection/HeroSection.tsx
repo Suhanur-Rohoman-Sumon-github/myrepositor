@@ -1,5 +1,5 @@
-import Container from '../../../components/Container';
-import './HeroSection.css';
+import Container from "../../../components/Container";
+import "./HeroSection.css";
 const HeroSection = () => {
   return (
     <div className="h-[892px]  overflow-hidden    relative heroSection">
@@ -23,22 +23,30 @@ const HeroSection = () => {
 
         {/* design in  corner */}
         <div className="absolute w-[300px] h-[300px] top-0  left-0 ">
-          <img className="w-full h-full" src="/public/herocorner1.png" alt="" />
+          <img
+            className="w-full h-full"
+            src="https://i.ibb.co.com/QrrGLkG/herocorner1.png"
+            alt=""
+          />
         </div>
         <div className="absolute w-[100px] h-[100px] top-0  right-5 ">
-          <img className="w-full h-full" src="/public/herocorner2.png" alt="" />
+          <img
+            className="w-full h-full"
+            src="https://i.ibb.co.com/tZ542pr/herocorner2.png"
+            alt=""
+          />
         </div>
 
         {/* side image section one */}
         <div className="hidden lg:block">
           <img
             className="w-[237px] rounded-md  h-[300px] rotate-12 absolute left-24"
-            src="/public/hero1.jpeg"
+            src="https://i.ibb.co.com/PFrz4mr/hero1.jpg"
             alt=""
           />
           <img
             className="w-[165px] rounded-md absolute top-[600px] left-[390px] -rotate-12  h-[199px]"
-            src="/public/hero2.jpeg"
+            src="https://i.ibb.co.com/LvTd3fX/hero2.jpg"
             alt=""
           />
         </div>
@@ -46,12 +54,12 @@ const HeroSection = () => {
         <div className="hidden lg:block">
           <img
             className="w-[165px] rounded-md absolute top-[200px] right-[100px] rotate-12 z-40 h-[199px]"
-            src="/public/hero3.jpeg"
+            src="https://i.ibb.co.com/LvRz6dt/hero3.jpg"
             alt=""
           />
           <img
             className="w-[237px] rounded-md  h-[300px] -rotate-12 absolute top-[470px] right-24"
-            src="/public/hero4.jpeg"
+            src="https://i.ibb.co.com/mqbNvvz/hero4.jpg"
             alt=""
           />
         </div>

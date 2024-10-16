@@ -1,12 +1,12 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Container from '../../../components/Container';
-import HeadingText from '../../../components/HeadingText';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from "swiper/react";
+import Container from "../../../components/Container";
+import HeadingText from "../../../components/HeadingText";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 // import required modules
-import { FreeMode, Pagination } from 'swiper/modules';
-import BlogCard from '../../../components/BlogCard';
+import { FreeMode, Pagination } from "swiper/modules";
+import BlogCard from "../../../components/BlogCard";
 const Articalse = () => {
   return (
     <Container>
@@ -16,9 +16,9 @@ const Articalse = () => {
         style="text-center my-12"
       ></HeadingText>
       <div className="lg:flex overflow-hidden space-y-5 items-center gap-10">
-        <div className="bg-[url(/public/blogBg.jpeg)] h-[450px] bg-no-repeat lg:w-[400px] bg-center bg-cover relative rounded-lg">
+        <div className="bg-[url(https://i.ibb.co.com/6vLhXpX/blogBg.jpg)] h-[450px] bg-no-repeat lg:w-[400px] bg-center bg-cover relative rounded-lg">
           <div className="bg-gradient-to-b to-black/50 h-1/3 via-black/50 from-transparent text-white space-y-3 absolute bottom-0 w-full flex-col flex justify-center items-center rounded-lg p-5">
-            {' '}
+            {" "}
             <div className="flex gap-2">
               <button className="btn-primary-sm text-xs">IT Companies</button>
               <button className="btn-primary-sm text-xs">Uncategorized</button>

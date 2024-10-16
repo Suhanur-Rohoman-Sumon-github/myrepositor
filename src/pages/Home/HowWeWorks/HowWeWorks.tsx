@@ -1,11 +1,11 @@
-import { FaSearch } from 'react-icons/fa';
-import Container from '../../../components/Container';
-import HeadingText from '../../../components/HeadingText';
-import HowWeWorksCard from '../../../components/HowWeWorksCard';
+import { FaSearch } from "react-icons/fa";
+import Container from "../../../components/Container";
+import HeadingText from "../../../components/HeadingText";
+import HowWeWorksCard from "../../../components/HowWeWorksCard";
 
 const HowWeWorks = () => {
   return (
-    <div className="bg-[url(/public/howWeWork.jpeg)] bg-center bg-contain h-fit p-12 lg:p-0 lg:h-[730px] flex justify-center items-center">
+    <div className="bg-[url(https://i.ibb.co.com/ySZ6gS4/how-We-Work.jpg)] bg-center bg-contain h-fit p-12 lg:p-0 lg:h-[730px] flex justify-center items-center">
       <Container>
         <HeadingText
           heading=" Solutions To Improve  Performance"

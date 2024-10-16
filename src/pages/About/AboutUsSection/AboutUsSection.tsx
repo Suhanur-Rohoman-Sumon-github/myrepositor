@@ -9,7 +9,7 @@ const AboutUsSection = () => {
       <div className="lg:w-1/2">
         <img
           className="w-full rounded-r-lg rounded-tr-[200px]"
-          src="https://s3-alpha-sig.figma.com/img/b30f/4265/91e160b03e0081c978b3f5108d7068cc?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dBRFz94pEB3x0ikYWhWsikLBNg4NUGNXjJN8iPBiUnfMzCuvti8pWV7uiUOIrdXNLoRv~PS7mxozGBk9wDHFDXsjZEm3Xa7l9nzkxPZki9aSZmejCftpkcyfPz8Ka~7cdBs-aLKOTd3~75hVFMgxvKOFMwgsZFqcOWyLV9MIwBLKSVhhdw89zvfD69J~DZk0x73GG-jXDaM0fTKb~mWLwrymB202ZSSYrz-~pHk5Q301W3Vz2oteNHzrLUy~9t50KLD4JrKfzyLWGK65REZyq-X10l71YPfz6rU9zvS4W4RdBr6Qd2HVnOgn1O1WewkJvIIVzsZ9tXGcC~HIe6JM-A__"
+          src="/public/aboutus.jpeg"
           alt=""
         />
       </div>

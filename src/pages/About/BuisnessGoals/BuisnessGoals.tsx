@@ -11,7 +11,7 @@ import { IoCheckmarkDoneCircle } from 'react-icons/io5';
 const BuisnessGoals = () => {
   const [tabToggle, setTabToggle] = useState('expertise');
   return (
-    <div className="bg-[url(https://s3-alpha-sig.figma.com/img/1fae/de3d/3415061c93d2d7161740fce925c81414?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X9El7RCmHNziLqW5mJ93FCtQ8XRDyEpMJqYlCKxWB5MaL5WjK8lREj89Ic1wf~E9SZXPpmhmZEdqijeEX-Iy3oWIjJRHy6VSUNebhoWMckfqTv3dvdzi7IjVLI84BoDEA6t9slvEJJVOeKGsct6TabDdfw8r1KxW6pxs6lm6kvYLnPmPIh6R1sqPoIPy~AakyMDnjtFisn4JKkqTEmjAPfw4vAdmsOYD8~XClw7t~QaAvQEphRSGXRsT0qYMN2yv4k6icNsQ3CMxGVqpCMOSBezDmf5bscAjJ~kF-wgyPYvJFg2DHe62qGQU~mRLi-DJ4y4GOrLsEqt5WjR3chuScA__)] lg:h-[652px] bg-cover bg-center flex justify-center items-center">
+    <div className="bg-[url(/public/howWeWork.jpeg)] lg:h-[652px] bg-cover bg-center flex justify-center items-center">
       <Container>
         <div className="lg:flex justify-between items-center">
           <HeadingText

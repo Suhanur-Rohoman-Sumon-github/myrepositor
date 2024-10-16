@@ -1,5 +1,5 @@
-import { FaQuoteRight } from "react-icons/fa6";
-import Container from "../../../components/Container";
+import { FaQuoteRight } from 'react-icons/fa6';
+import Container from '../../../components/Container';
 
 const HappyCoustomer = () => {
   return (
@@ -8,7 +8,7 @@ const HappyCoustomer = () => {
         <div className="lg:w-1/2">
           <img
             className="rounded-tr-[120px] h-[394px] rounded-bl-[120px] rounded-s-xl rounded-e-xl"
-            src="https://s3-alpha-sig.figma.com/img/0a37/9ca9/c5e3fe4d932c32f93f33736219ef6891?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=odX7lKxoo78oC3fjxpzk5YX1Aj1Vm7lgo0NRKd0kc2TSwdPJ9dq9Eo~tPy2ggM1yPlQR7sQ4PBibvSJ3Owd96Jvu46FbPO-J90BfYFuDEfzphPO-V6si3semgVXnK4mbMuwSuu8uAH6enS8k0MRC-Y0caiBkkKKOHy9GzB4Z2u7GCwitEDmNkAwYYlR6DyVkfxZUj6aZx9AUIzZbSdWJ43ejM~14bV~2sKbrJ0GUqgxJr6Z8StoSoDDF9Oq2y~53dh0Q2zGNMV89KvjG05RVkSawjQWJXsGgg38~jJEwhV7aiKXUND~0MQfNyJK1dcVOVv4drsTGEa0Vd3DIKvGXBg__"
+            src="/public/happyClients.jpeg"
             alt=""
           />
         </div>

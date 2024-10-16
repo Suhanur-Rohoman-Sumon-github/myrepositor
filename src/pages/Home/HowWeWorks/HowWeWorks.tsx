@@ -1,11 +1,11 @@
-import { FaSearch } from "react-icons/fa";
-import Container from "../../../components/Container";
-import HeadingText from "../../../components/HeadingText";
-import HowWeWorksCard from "../../../components/HowWeWorksCard";
+import { FaSearch } from 'react-icons/fa';
+import Container from '../../../components/Container';
+import HeadingText from '../../../components/HeadingText';
+import HowWeWorksCard from '../../../components/HowWeWorksCard';
 
 const HowWeWorks = () => {
   return (
-    <div className="bg-[url(https://s3-alpha-sig.figma.com/img/045d/1a82/43700b96f6ae32909d0a73212752273a?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HR23boagBP4WY1q3rKevjTLPVuKVV2ItzAQa9pOKZ1kxucVKEbWpDgmtSdhnG4DDgJufaEmfD2uTaog9Ri6R3EHCsbxguociV~tWWv2DiMVG16H3wyLrKSH5Z0QqG2Q4u5UsZpRJ~PNCmjlmndCr4kyofpOc4iQ-buVFqyQ-imiGMKIo8n~f4HEw0jMxu6jej9NdpkJXG5hp3EbTYF0JqLD6Zh~LLBxyYEiIOBlJEIuWjLdRv3M7UqJ~EhPJ-mmkQDWpFjzXOKcyhr5xFH~ojhuQLCJc~9lr2jFycZEJYWfAbBugnDfq~e4Nv26Hxmy2SPIZ4Bk-HQVX00H-5NB5RA__)] bg-center bg-contain h-fit p-12 lg:p-0 lg:h-[730px] flex justify-center items-center">
+    <div className="bg-[url(/public/howWeWork.jpeg)] bg-center bg-contain h-fit p-12 lg:p-0 lg:h-[730px] flex justify-center items-center">
       <Container>
         <HeadingText
           heading=" Solutions To Improve  Performance"

@@ -2,15 +2,12 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { FormEvent, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import {
-  useDeleteManyCartMutation,
-  useGetAllCartQuery,
-} from "../Redux/features/cart/cartApis";
+import { useGetAllCartQuery } from "../Redux/features/cart/cartApis";
 import { useAppSelector } from "../Redux/hooks/hooks";
 import { TCartItem } from "../pages/CartPage/CartPage";
 import { useOrderMutation } from "../Redux/features/Orders/ordersApis";
 
-const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
+const CheckOutForm = ({ price }: { price: number; ids: string[] }) => {
   const user = useAppSelector((state) => state.authTechTuend.user);
   const [order, { data: orderRes }] = useOrderMutation();
   const [formData, setFormData] = useState({
@@ -39,8 +36,6 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
   const [secretKey, setSecretKey] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-  const [deleteManyCart, { data: deltedResponse }] =
-    useDeleteManyCartMutation();
 
   // get the payment secret
   useEffect(() => {
@@ -106,7 +101,6 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
     if (paymentIntent?.status === "succeeded") {
       order(formData);
       setIsLoading(false);
-      deleteManyCart(ids);
     } else {
       toast.error("Payment unsuccessfull");
       setIsLoading(false);
@@ -123,12 +117,12 @@ const CheckOutForm = ({ price, ids }: { price: number; ids: string[] }) => {
     });
   };
   useEffect(() => {
-    if (deltedResponse?.success && orderRes?.success) {
+    if (orderRes?.success) {
       toast.success("Payment success");
       console.log(orderRes);
       navigate("/services");
     }
-  }, [deltedResponse, navigate, orderRes]);
+  }, [navigate, orderRes]);
   return (
     <form
       className="lg:flex justify-between gap-10 w-full "

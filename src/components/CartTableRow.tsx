@@ -1,10 +1,7 @@
-import { FaMinus, FaPlus, FaXmark } from 'react-icons/fa6';
-import {
-  useDeleteCartMutation,
-  useUpdateQuantityMutation,
-} from '../Redux/features/cart/cartApis';
-import toast from 'react-hot-toast';
-import { useEffect, useState } from 'react';
+import { FaMinus, FaPlus } from "react-icons/fa6";
+import { useUpdateQuantityMutation } from "../Redux/features/cart/cartApis";
+import toast from "react-hot-toast";
+import { useState } from "react";
 
 const CartTableRow = ({
   item,
@@ -19,7 +16,7 @@ const CartTableRow = ({
   const { name, price, image } = item.service;
   const [updateQuantity] = useUpdateQuantityMutation();
   const [loading, setLoading] = useState(false);
-  const [deleteCart, { data }] = useDeleteCartMutation();
+
   const handlerIncreaseQuanity = async () => {
     setLoading(true);
     if (item.quantity) {
@@ -30,7 +27,7 @@ const CartTableRow = ({
   const handlerDecreaseQuantity = async () => {
     setLoading(true);
     if (item.quantity <= 1) {
-      toast.error('Service is should not less then 1');
+      toast.error("Service is should not less then 1");
       setLoading(false);
     } else {
       await updateQuantity({ id: item._id, quantity: item.quantity - 1 });
@@ -38,20 +35,10 @@ const CartTableRow = ({
     }
   };
 
-  useEffect(() => {
-    if (data?.success) {
-      toast.success(data?.message);
-    }
-  }, [data]);
   return (
-    <tr className={`${loading ? 'opacity-40' : 'opacity-100'} `}>
-      <th>
-        <button onClick={() => deleteCart(item._id)}>
-          <FaXmark />
-        </button>
-      </th>
+    <tr className={`${loading ? "opacity-40" : "opacity-100"} `}>
       <td className="flex gap-2 items-center">
-        {' '}
+        {" "}
         <img className="w-12 h-12 rounded-md" src={image as string} alt="" />
         <span className="font-semibold">{name as string}</span>
       </td>
@@ -62,8 +49,8 @@ const CartTableRow = ({
           onClick={handlerDecreaseQuantity}
           className="px-3 py-1 bg-brandPrimary rounded-md text-white"
         >
-          <FaMinus />{' '}
-        </button>{' '}
+          <FaMinus />{" "}
+        </button>{" "}
         <span className=" px-3">{item.quantity}</span>
         <button
           disabled={loading}

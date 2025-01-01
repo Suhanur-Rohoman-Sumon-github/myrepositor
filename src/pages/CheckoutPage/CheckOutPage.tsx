@@ -1,18 +1,18 @@
-import { useParams } from "react-router-dom";
-import Breakpoints from "../../components/Breakpoints";
-import Container from "../../components/Container";
-import HeadingText from "../../components/HeadingText";
-import CheckOutForm from "../../components/CheckOutForm";
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
-import "./CheckoutPage.css";
+import { useParams } from 'react-router-dom';
+import Breakpoints from '../../components/Breakpoints';
+import Container from '../../components/Container';
+import HeadingText from '../../components/HeadingText';
+import CheckOutForm from '../../components/CheckOutForm';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import './CheckoutPage.css';
 const CheckOutPage = () => {
   const { price, ids } = useParams();
 
-  const arrayOfIds = ids?.split(",");
+  const arrayOfIds = ids?.split(',');
   const priceInNumnber = parseFloat(price as string);
   const stripePromise = loadStripe(
-    "pk_test_51OaW7SA36EHsCe9dKWgajsjH1lrsZ0a07POTljAYtkgaJD4SP1u6Gxr7QeeU67kD88gdAksRjp1GJzoI1oUKAfOl00bfsoroS0"
+    'pk_live_51QBsidFo4VhrdkqeFTz8DIC1NrpUqMeTEz101umguCMr0xNC72Io0zSil8B0P4othONL6YxaCkmEjjevP5mE5ppy00Mn2kn4nS'
   );
   return (
     <div className="mt-[116px]">

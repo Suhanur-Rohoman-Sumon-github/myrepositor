@@ -16,7 +16,34 @@ const userApis = baseApi.injectEndpoints({
         body: userInfo,
       }),
     }),
+    deleteUser: builder.mutation({
+      query: email => ({
+        url: `/users/${email}`,
+        method: 'put',
+      }),
+      invalidatesTags: ['user'],
+    }),
+    makeAdmin: builder.mutation({
+      query: email => ({
+        url: `/users/${email}`,
+        method: 'patch',
+      }),
+      invalidatesTags: ['user'],
+    }),
+    getAllUser: builder.query({
+      query: () => ({
+        url: '/users',
+        method: 'GET',
+      }),
+      providesTags: ['user'],
+    }),
   }),
 });
 
-export const { useSignupMutation, useLoginMutation } = userApis;
+export const {
+  useSignupMutation,
+  useLoginMutation,
+  useGetAllUserQuery,
+  useDeleteUserMutation,
+  useMakeAdminMutation,
+} = userApis;

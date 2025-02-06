@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link } from 'react-router-dom';
 
 const AdminLayout = () => {
   return (
@@ -42,7 +42,7 @@ const AdminLayout = () => {
             </li>
             <li>
               <Link
-                to="/admin/Add services"
+                to="/admin/Add-services"
                 className="block px-4 py-2 rounded hover:bg-gray-700"
               >
                 Add Services

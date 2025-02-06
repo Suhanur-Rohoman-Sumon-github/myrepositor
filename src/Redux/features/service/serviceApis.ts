@@ -10,13 +10,14 @@ const serviceApi = baseApi.injectEndpoints({
       providesTags: ['services'],
     }),
     createService: builder.mutation({
-      query: () => ({
+      query: serviceInfo => ({
         url: '/services',
         method: 'POST',
+        body: serviceInfo,
       }),
       invalidatesTags: ['services'],
     }),
-    updateUser: builder.mutation({
+    updateservices: builder.mutation({
       query: payload => ({
         url: `/services/${payload.id}`,
         method: 'GET',
@@ -27,4 +28,8 @@ const serviceApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useGetAllServiceQuery } = serviceApi;
+export const {
+  useGetAllServiceQuery,
+  useCreateServiceMutation,
+  useUpdateservicesMutation,
+} = serviceApi;

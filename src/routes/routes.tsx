@@ -23,6 +23,7 @@ import CreateAdmin from '../pages/admin/CreateAdmin/CreateAdmin';
 import AllUsers from '../pages/admin/AllUsers/AllUsers';
 import CreateProducts from '../pages/admin/CreateProducts/CreateProducts';
 import UpdateServices from '../pages/admin/updateServices/UpdateServices';
+import UpdateForm from '../pages/admin/UpdateForm/UpdateForm';
 
 const route = createBrowserRouter([
   {
@@ -126,6 +127,14 @@ const route = createBrowserRouter([
       {
         path: '/admin/updateServices',
         element: <UpdateServices />,
+      },
+      {
+        path: '/admin/updateServices/:id',
+        element: <UpdateForm />,
+        loader: ({ params }) =>
+          fetch(
+            `https://techtuend-service-server.vercel.app/api/services/${params.id}`
+          ),
       },
     ],
   },

@@ -17,6 +17,9 @@ import ContactPage from "../pages/ContactPage/ContactPage";
 import WhySEOIdeaPlanetService from "../pages/WhyWeAre/WhyWeAre";
 import Contact from "../pages/contact/Contact";
 import RefundPolicy from "../pages/RefundPage/RefundPolicy";
+import AdminLayout from "../layouts/AdminLayout";
+import AdminHome from "../pages/admin/AdminHome/AdminHome";
+import CreateAdmin from "../pages/admin/CreateAdmin/CreateAdmin";
 
 const route = createBrowserRouter([
   {
@@ -94,6 +97,20 @@ const route = createBrowserRouter([
       {
         path: "/refund",
         element: <RefundPolicy />,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      {
+        path: "/admin/dashboard",
+        element: <AdminHome />,
+      },
+      {
+        path: "/admin/create-user",
+        element: <CreateAdmin />,
       },
     ],
   },

@@ -37,7 +37,7 @@ const AllUsers = () => {
             <th>Email</th>
             <th>Phone</th>
             <th>Role</th>
-            <th>Action</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -49,9 +49,6 @@ const AllUsers = () => {
                 <td>{user?.phone}</td>
                 <td>{user?.role}</td>
                 <td className="flex items-center gap-2">
-                  <button>
-                    <FaUser />
-                  </button>{' '}
                   <button
                     onClick={() => handlerDeleteUser(user.email)}
                     className="text-red-500"

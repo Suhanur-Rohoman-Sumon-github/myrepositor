@@ -1,4 +1,4 @@
-import { FaTrash, FaUser } from 'react-icons/fa6';
+import { FaTrash } from 'react-icons/fa6';
 import {
   useDeleteUserMutation,
   useGetAllUserQuery,

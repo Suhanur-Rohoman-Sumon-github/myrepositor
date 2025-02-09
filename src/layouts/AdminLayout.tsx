@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link } from "react-router-dom";
 
 const AdminLayout = () => {
   return (
@@ -65,6 +65,9 @@ const AdminLayout = () => {
               </Link>
             </li>
           </ul>
+          <div className="mt-auto p-4 text-sm text-gray-400">
+            Admin Panel © 2025
+          </div>
           <div className="mt-auto p-4 text-sm text-gray-400">
             Admin Panel © 2025
           </div>

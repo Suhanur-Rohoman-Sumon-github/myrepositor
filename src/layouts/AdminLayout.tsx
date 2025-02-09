@@ -6,9 +6,6 @@ const AdminLayout = () => {
       {/* Navbar */}
       <div className="bg-gray-800 text-white px-6 py-4 flex items-center justify-between">
         <h1 className="text-xl font-bold">Admin Panel</h1>
-        <button className="text-sm bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">
-          Logout
-        </button>
       </div>
 
       {/* Sidebar and Main Content */}
@@ -66,10 +63,9 @@ const AdminLayout = () => {
             </li>
           </ul>
           <div className="mt-auto p-4 text-sm text-gray-400">
-            Admin Panel © 2025
-          </div>
-          <div className="mt-auto p-4 text-sm text-gray-400">
-            Admin Panel © 2025
+            <Link className="button-primary" to={"/"}>
+              Back to home
+            </Link>
           </div>
         </aside>
 

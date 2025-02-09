@@ -124,10 +124,13 @@ const Navbar = () => {
                   </div>
                   <button
                     onClick={() => dispatch(logout())}
-                    className="btn-primary mt-3"
+                    className="btn-primary mt-3 w-full"
                   >
                     Logout
                   </button>
+                  <div className="btn-primary mt-4">
+                    <Link to="/admin/dashboard">My account</Link>
+                  </div>
                 </div>
               </div>
             ) : (

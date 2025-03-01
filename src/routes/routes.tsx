@@ -45,15 +45,6 @@ const route = createBrowserRouter([
       {
         path: "/service/:id",
         element: <ServiceDetailsPage />,
-        loader: ({ params }) =>
-          fetch(
-            `https://techtuend-service-server.vercel.app/api/services/${params.id}`,
-            {
-              method: "GET",
-              mode: "cors",
-              credentials: "include",
-            }
-          ),
       },
       {
         path: "/case-studies",

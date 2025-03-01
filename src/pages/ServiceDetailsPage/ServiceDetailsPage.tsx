@@ -3,18 +3,11 @@ import { useParams, useNavigate } from "react-router-dom";
 import Breakpoints from "../../components/Breakpoints";
 import HeadingText from "../../components/HeadingText";
 import Container from "../../components/Container";
-import { TService } from "../Home/OurService/OurService";
 import { useAppSelector } from "../../Redux/hooks/hooks";
 import { useAddedToCartMutation } from "../../Redux/features/cart/cartApis";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useGetSingleServicesQuery } from "../../Redux/features/service/serviceApis";
-
-type TResponse = {
-  success: boolean;
-  message: string;
-  data: TService;
-};
 
 const ServiceDetailsPage = () => {
   const { id } = useParams();
@@ -28,7 +21,6 @@ const ServiceDetailsPage = () => {
 
   // Fetch Service Details
   const { data: service } = useGetSingleServicesQuery({ id: id });
-  console.log(service);
 
   const handlerAddToCart = () => {
     setLoading(true);

@@ -25,6 +25,14 @@ const serviceApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ['services'],
     }),
+    getSingleServices: builder.query({
+      query: payload => ({
+        url: `/services/${payload.id}`,
+        method: 'GET',
+        body: payload.servicesInfo,
+      }),
+      
+    }),
   }),
 });
 
@@ -32,4 +40,5 @@ export const {
   useGetAllServiceQuery,
   useCreateServiceMutation,
   useUpdateservicesMutation,
+  useGetSingleServicesQuery
 } = serviceApi;

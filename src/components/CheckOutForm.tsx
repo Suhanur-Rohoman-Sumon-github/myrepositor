@@ -2,7 +2,10 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { FormEvent, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { useGetAllCartQuery } from "../Redux/features/cart/cartApis";
+import {
+  useGetAllCartQuery,
+  useGetPaymentSecretMutation,
+} from "../Redux/features/cart/cartApis";
 import { useAppSelector } from "../Redux/hooks/hooks";
 import { TCartItem } from "../pages/CartPage/CartPage";
 import { useOrderMutation } from "../Redux/features/Orders/ordersApis";
@@ -33,26 +36,21 @@ const CheckOutForm = ({ price }: { price: number; ids: string[] }) => {
   // stripe vars
   const stripe = useStripe();
   const elements = useElements();
+  const [getPaymentSecret] = useGetPaymentSecretMutation();
+  console.log(getPaymentSecret);
   const [secretKey, setSecretKey] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   // get the payment secret
   useEffect(() => {
-    fetch("https://techtuend-service-server.vercel.app/api/payments", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({ price }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          setSecretKey(data.data.clientSecret);
-        }
-      });
-  }, [price]);
+    const fetchPaymentSecret = async () => {
+      const result = await getPaymentSecret({ price }).unwrap();
+      setSecretKey(result.secret);
+    };
+    fetchPaymentSecret();
+  }, [getPaymentSecret, price]);
+  
 
   const handleSubmitFormSubmit = async (event: FormEvent) => {
     // We don't want to let default form submission happen here,

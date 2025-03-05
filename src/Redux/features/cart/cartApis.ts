@@ -25,6 +25,13 @@ const cartApis = baseApi.injectEndpoints({
       }),
       invalidatesTags: ['cart'],
     }),
+    getPaymentSecret: builder.mutation({
+      query: price => ({
+        url: '/payments',
+        method: 'POST',
+        body: { price },
+      }),
+    }),
   }),
 });
 
@@ -32,4 +39,5 @@ export const {
   useAddedToCartMutation,
   useGetAllCartQuery,
   useUpdateQuantityMutation,
+  useGetPaymentSecretMutation
 } = cartApis;

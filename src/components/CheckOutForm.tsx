@@ -37,20 +37,19 @@ const CheckOutForm = ({ price }: { price: number; ids: string[] }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [getPaymentSecret] = useGetPaymentSecretMutation();
-  console.log(getPaymentSecret);
   const [secretKey, setSecretKey] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   // get the payment secret
   useEffect(() => {
-    const fetchPaymentSecret = async () => {
-      const result = await getPaymentSecret({ price }).unwrap();
-      setSecretKey(result.secret);
-    };
-    fetchPaymentSecret();
+    if (price) {
+      getPaymentSecret({ price })
+        .unwrap()
+        .then((result) => setSecretKey(result.data.clientSecret))
+        .catch(() => toast.error("Error fetching payment secret"));
+    }
   }, [getPaymentSecret, price]);
-  
 
   const handleSubmitFormSubmit = async (event: FormEvent) => {
     // We don't want to let default form submission happen here,

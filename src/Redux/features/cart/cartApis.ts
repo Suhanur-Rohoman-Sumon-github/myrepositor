@@ -29,7 +29,7 @@ const cartApis = baseApi.injectEndpoints({
       query: price => ({
         url: '/payments',
         method: 'POST',
-        body: { price },
+        body:  price ,
       }),
     }),
   }),
